@@ -9,7 +9,7 @@
 		
 		if(empty($routeParts[0])){
 			require "controllers/index.php";
-			$controller = new IndexController();
+			$controller = new Index();
 			$controller->index();
 			return false;
 		}
@@ -50,5 +50,4 @@
 			return false;
 		}
 	}
-
 ?>
