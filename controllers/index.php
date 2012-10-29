@@ -1,5 +1,5 @@
 <?php
-	class IndexController extends Controller{
+	class Index extends Controller{
 		function __construct(){
 			parent ::__construct();
 
@@ -7,7 +7,7 @@
 	
 	
 	function index(){
-			$this->view->getView("index");
+			$this->view->getView("index/index");
 		}
 		
 		function test(){

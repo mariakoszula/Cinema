@@ -2,6 +2,8 @@ RewriteEngine on
 Options -MultiViews
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+PHP_FLAG output_buffering on
 
-RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+RewriteRule ^(.*)$ index.php?page_url=$1 [L,QSA]
 

@@ -1,17 +1,13 @@
 <?php
 
-class IndexModel extends Model{
+class IndexModel{
 	function __construct(){
-		parent::__construct();
-		
-	
 	}
 	public function test(){
-		$sql = 'SELECT * from movie';
-		$result = $this -> db -> prepare($sql);
-		$result->execute();
-		$sth = $result->fetchAll();
-		print_r($sth);
-	}
+/*  		require "doctrine/bootstrap.php";
+		$dql = 'SELECT a from Users a';
+		$results = $em->createQuery($dql)->getResult();
+		print_r($results[0]);
+	*/}
 }
 ?>

@@ -1,10 +1,8 @@
 <?php
-
-
 /** @Entity
-	* @Table(name="users")
-	**/
-class Users {
+* @Table(name="ticket")
+**/
+class Ticket {
 	/** @Id @Column(type="integer") @GeneratedValue */
 	protected $id;
 

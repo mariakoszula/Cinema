@@ -1,0 +1,7 @@
+# specyficzne pliki
+.DS_Store
+# wildcard
+*~
+*.tmp
+# ignoruj opliki i podkatalogi katalogu tymczasowe
+tymczasowe/**/*
