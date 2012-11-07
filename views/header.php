@@ -7,9 +7,10 @@
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/custom.js"></script>
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/jquery.js"></script>
 <script type="text/javascript" src="<?php echo URL;?>/views/rooms/js/default.js"></script>
+
 </head>
 
-<bodyonload="displaySeats()">
+<body>
 <?php session_start();?>
 <div id="header">
 
