@@ -1,6 +1,7 @@
 <?php
 	class Rooms extends Controller{
 		function __construct(){
+			
 			parent ::__construct();
 			session_start();
 			$logged = $_SESSION['loggedIn'];
@@ -37,6 +38,18 @@
 	}
 		
 	public function save(){
+		foreach ($_POST as $key => $value){
+			if ($key == 'id') $id= array('id' => $value);
+			if ($key != 'id'){
+			$tmp=explode("S", $key);
+			$seat[] = array(
+				'row_no' => $tmp[0],
+				'seat_no' => $tmp[1],
+				'type' => $value);
+			}}
+			$data = array_merge($id, $seat);
+			$this->view->save = $this->model->save($data);
+			header('Location: '.URL.'rooms');
 			
 	}
 }

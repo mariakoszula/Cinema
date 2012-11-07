@@ -1,11 +1,10 @@
 <?php
 require ('config.php');
-
-	//require_once ("doctrine/bootstrap.php");
-	require_once (LIBS."Controller.php");
-	require_once (LIBS."View.php");
-	require_once (LIBS."Router.php");
-
+function __autoload($class){
+	echo "autoload $class<br/>";
+	require_once (LIBS.$class.".php");
+	
+}
 $app = new Router();
 ?>
 
