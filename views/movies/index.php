@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Lista filmów dodawanie filmów i ustawianie czy sa na ekranie czy nie i tyl
 <?php
+=======
+Filmy
+<!-- <?php
+>>>>>>> adding_rooms
 =======
 Filmy
 <!-- <?php
