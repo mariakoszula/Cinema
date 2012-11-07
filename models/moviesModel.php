@@ -1,5 +1,4 @@
 <?php
-
 class MoviesModel {
 
 	function __construct() {
