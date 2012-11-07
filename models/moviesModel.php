@@ -1,5 +1,5 @@
 <?php
-class RoomsModel {
+class MoviesModel {
 	function __construct() {
 
 	}
