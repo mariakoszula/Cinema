@@ -25,11 +25,14 @@
 	}
 
 	public function add(){
-
-			/*$name=$_POST['name'];
-			$this->view->add = $this->model->add($name);
-			$this->view->getView('rooms/index');
-			header ('Location: ../rooms');*/
+			$data = array();
+			$data['title']=$_POST['title'];
+			$data['desc']=$_POST['description'];
+			$data['time']=$_POST['time'];
+			
+			$this->view->add = $this->model->add($data);
+			//$this->view->getView('rooms/index');
+			header ('Location: ../movies');
 	}
 }
 ?>

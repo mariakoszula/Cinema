@@ -4,15 +4,12 @@ class MoviesModel {
 
 	}
 
-/*	function add($name) {
-		//@TODO złapanie error exception żeby wywaliło że sala o danej nazwie istnieje
+	function add($data) {
 		require_once "doctrine/bootstrap.php";
-		$room = new Room();
-		$room->setName($name);
-		$nazwa = $room->getName();
-		$em->persist($room);
+		$movie = new Movie($data['title'], $data['desc'], false, $data['time']);
+		$em->persist($movie);
 		$em->flush();
-	}*/
+	}
 
 	public function listOfMovies() {
 		require_once "doctrine/bootstrap.php";

@@ -16,7 +16,7 @@ echo "<table>";
 foreach ($this->listOfMovies as $key => $value){
 		echo "<tr>";
 		echo "<td>".$value['title']."</td>";
-		echo "<td>is on scren</td>";
+		echo "<td>is on screan</td>";
 		echo "</tr>";
 		}
 echo "</table>";
