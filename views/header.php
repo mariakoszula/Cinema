@@ -4,10 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Cinema</title>
-<script type="text/javascript" src="<?php echo URL;?>public/Scripts/custom.js"></script>
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/jquery.js"></script>
 <script type="text/javascript" src="<?php echo URL;?>/views/rooms/js/default.js"></script>
-
+<script type="text/javascript" src="<?php echo URL;?>/views/showing/js/default.js"></script>
 </head>
 
 <body>
@@ -24,13 +23,10 @@
 					echo "<a href='".URL."manager/listOfUsers'>Baza użytkowników</a>";
 					echo "<a href='".URL."manager'>Dodawanie użytkowników</a>";
 					echo "<a href='".URL."rooms'>Sale</a>";
-					echo "<a href='".URL."movies'>Filmy</a>";
-					echo "<a href='".URL."shows'>Seanse</a>";
+					echo "<a href='".URL."showing'>Zarządzenie repertuarem</a>";
 					break;
 				case "worker":
-				 	echo "<a href='".URL."'>Baza klientów</a>";
-				 	echo "<a href='".URL."movies'>Filmy</a>";
-					echo "<a href='".URL."shows'>Seanse</a>";
+				 	echo "<a href='".URL."shows'>Zarządzenie repertuarem</a>";
 					break;
 				case "client":
 				 	echo "<a href='".URL."'>Moje konto</a>";
