@@ -13,7 +13,7 @@ class Movie {
 	/** @Column(name="description", type="string")*/
 	private $desc;
 //@TODO kategorie
-	/** @Column(name="category_id", type="int")*/
+	/** @Column(name="category_id", type="integer")*/
 	private $category;
 
 	/** @Column(name="rating", type="float")*/
@@ -22,7 +22,7 @@ class Movie {
 	/** @Column(name="is_on_screan", type="boolean")*/
 	private $is_on_screan;
 
-	/** @Column(name="runtime", type="int")*/
+	/** @Column(name="runtime", type="integer")*/
 	private $runtime;
 
 
@@ -44,7 +44,7 @@ class Movie {
 		return $this->desc;
 	}
 	
-	public function getIsOnS() {
+	public function getIsOnScrean() {
 		return $this->is_on_screan;
 	}
 	
