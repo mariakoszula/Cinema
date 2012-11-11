@@ -8,21 +8,20 @@ class Show {
 	protected $id;
 
 	
-	/** @OneToMany(targetEntity="Room", mappedBy="id")
+	/** @Column(name="room_id", type="integer")
 	 * */
-	private $room;
+	protected $room;
 
-	/** @ManyToOne(targetEntity="Movie")
-	 *@JoinColumn(name="movie_id", referencedColumnName="id")*/
-	private $movie;
+	/**  @Column(name="movie_id", type="integer") */
+	protected $movie;
 
-	/** @Column(name="start_time", type="datetime")*/
+	/** @Column(name="start_time", type="string")*/
 	private $tstart;
 
-	/** @Column(name="end_time", type="datetime")*/
+	/** @Column(name="end_time", type="string")*/
 	private $tend;
 
-	/** @Column(name="basic_price", type="float4")*/
+	/** @Column(name="basic_price", type="float")*/
 	private $bprice;
 
 
@@ -32,6 +31,7 @@ class Show {
 		$this->tstart = $tstart;
 		$this->tend = $tend;
 		$this->bprice = $bprice;
+		
 	}
 	
 	public function getId() {
@@ -45,10 +45,10 @@ class Show {
 		return $this->movie;
 	}
 	
-	public function getTsart() {
+	public function getTstart() {
 		return $this->tstart;
 	}
-	
+
 	public function getTend() {
 		return $this->tend;
 	}

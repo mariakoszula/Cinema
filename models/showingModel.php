@@ -23,6 +23,18 @@ class ShowingModel {
 	
 	public function shows($movie) {
 		require_once "doctrine/bootstrap.php";
+		$dql = "SELECT s from Show s";
+		$res = $em->createQuery($dql)->getResult();
+		$show = array ();
+		//print_r($res);
+		/*foreach ($results as $result) {
+			$data[] = array (
+				'id' => $result->getId(),
+				'name' => $result->getName()
+			);
+		}*/
+		
+		
 		$qb = $em -> createQueryBuilder();
 		$qb -> select('r.id', 'r.name')
 			-> from('Room', 'r')
@@ -32,6 +44,27 @@ class ShowingModel {
 		$movie = array('movie' => $movie);
 		$data = array_merge($movie, $num);
 		return $data;
+	}
+	
+	public function save_show($data){
+		require_once "doctrine/bootstrap.php";
+		$movie = $em -> find('Movie', $data['movie']);
+		$runtime = $movie->getRuntime();
+		date_default_timezone_set('Europe/Berlin');
+		$interval = DateInterval::createFromDateString($runtime.' minutes');
+		$edate = new DateTime($data['start_time']);
+		$edate->add($interval);
+		$end_time = $edate->format('Y-m-d H:i:s');
+		$sdate = new DateTime($data['start_time']);
+		$start_time = $sdate->format('Y-m-d H:i:s');
+
+
+		$show = new Show($data['room'], $data['movie'], $start_time, $end_time, $data['bprice']);
+		$em-> persist($show);
+		$em->flush();
+		echo $num;
+		$msg =  "Utworzono użytkownika: " . $show->getId();
+		echo $msg;
 	}
 	
 	
