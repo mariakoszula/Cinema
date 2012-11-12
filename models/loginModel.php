@@ -1,13 +1,11 @@
 <?php
- 
 class LoginModel{
 	
 	public function __construct(){
-		
 	}
 	public function check(){
-		require_once "doctrine/bootstrap.php";
-		$query = $em->createQuery('SELECT COUNT(u.id) FROM Users u WHERE u.login = :login AND u.password = :password');
+		require_once ("bootstrap.php");
+		$query = $em ->createQuery('SELECT COUNT(u.id) FROM Users u WHERE u.login = :login AND u.password = :password');
 		$query->setParameters(array(
 			'login' => $_POST['login'],
 			'password' => md5($_POST['password'])

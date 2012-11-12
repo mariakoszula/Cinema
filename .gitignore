@@ -5,3 +5,4 @@
 *.tmp
 # ignoruj opliki i podkatalogi katalogu tymczasowe
 tymczasowe/**/*
+doctrine

@@ -2,13 +2,13 @@
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-require '../config.php';
+require 'config.php';
 require 'Doctrine/ORM/Tools/Setup.php';
 
 Doctrine\ORM\Tools\Setup::registerAutoloadPEAR();
 
 $isDevMode = true;
-$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/mapp"), $isDevMode);
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/entities"), $isDevMode);
 
 $conn = array(
   'driver' => DB_TYPE,

@@ -5,7 +5,7 @@ class ManagerModel {
 	}
 
 	function create($data) {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$user = new Users();
 		$user->setName($data['name']);
 		$user->setLastName($data['last_name']);
@@ -23,7 +23,7 @@ class ManagerModel {
 	}
 
 	public function listOfUsers() {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$dql = "SELECT a from Users a";
 		$results = $em->createQuery($dql)->getResult();
 		$data = array ();
@@ -39,7 +39,7 @@ class ManagerModel {
 	}
 
 	public function delete($id) {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$user = $em->find('Users', $id);
 		$login = $user->getLogin();
 		$em->remove($user);
@@ -50,7 +50,7 @@ class ManagerModel {
 	}
 
 	public function edit($id) {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$user = $em->find('Users', $id);
 		$data = array ();
 		$data['id'] = $user->getId();
@@ -64,8 +64,19 @@ class ManagerModel {
 	}
 
 	public function save($data) {
-		require_once "doctrine/bootstrap.php";
-		/*$query = $em->createQuery('update Users u SET u.name= :name, u.last_name= :last_name, u.phone= :phone, ' .
+		require_once ("bootstrap.php");
+		$user = $em -> find('Users', $data['id']);
+		$user->setName($data['name']);
+		$user->setLastName($data['last_name']);
+		$user->setRole($data['role']);
+		$user->setEmail($data['email']);
+		$user->setPhone($data['phone']);
+		$user->setLogin($data['login']);
+		$user->setPassword($data['password']);
+
+		$em->persist($user);
+		$em->flush();
+	/*$query = $em->createQuery('update Users u SET u.name= :name, u.last_name= :last_name, u.phone= :phone, ' .
 		'u.email= :email, u.role= :role, u.login= :login, u.password= :password WHERE u.id= :id');
 		$query->setParameters(array (
 			'id' => $data['id'],
@@ -77,7 +88,7 @@ class ManagerModel {
 			'login' => $data['login'],
 			'password' => md5($data['password'])
 		));
-		$numUpdated = $query->execute();*/
+		$numUpdated = $query->execute();
 		$qb = $em->createQueryBuilder();
 		$qb ->update('Users', 'u')
 			->set('u.name', '?1')
@@ -90,7 +101,7 @@ class ManagerModel {
 				3 => $data['login'],
 				4 => $data['id']));
 		$query = $qb->getQuery();
-		$query->execute();
+		$query->execute();*/
 		
 	}
 

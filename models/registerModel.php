@@ -5,7 +5,7 @@ class RegisterModel{
 	}
 
 	function create($data) {
-		require_once "doctrine/bootstrap.php";
+		//require_once LIBS."Bootstrap.php";
 	//@TODO walidacja plus sprawdzanie czy login juz nie istnieje przypadkiem 
 		/*$dql = "SELECT a from Users a";
 		$results = $em->createQuery($dql)->getResult();

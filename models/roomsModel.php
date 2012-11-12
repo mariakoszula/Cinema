@@ -6,7 +6,7 @@ class RoomsModel {
 
 	function add($name) {
 		//@TODO złapanie error exception żeby wywaliło że sala o danej nazwie istnieje
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$room = new Room();
 		$room->setName($name);
 		$nazwa = $room->getName();
@@ -15,7 +15,7 @@ class RoomsModel {
 	}
 
 	public function listOfRooms() {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$dql = "SELECT r from Room r";
 		$results = $em->createQuery($dql)->getResult();
 		$data = array ();
@@ -29,7 +29,7 @@ class RoomsModel {
 	}
 
 	public function delete($id) {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$user = $em->find('Room', $id);
 		$em->remove($user);
 		$em->flush();
@@ -37,7 +37,7 @@ class RoomsModel {
 
 	
 	public function seats($id) {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
 		$room = $em->find('Room', $id);
 		$room_data = array('name' => $room->getName(),
 					'id' => $room->getId());
@@ -59,8 +59,19 @@ class RoomsModel {
 	
 
 	public function save($data) {
-		require_once "doctrine/bootstrap.php";
+		require_once ("bootstrap.php");
+		/*$room = $em -> find('Room', $data['id']);
 		for($i=0; $i<sizeof($data)-1; $i++){
+		$dql = "Update Seat s SET s.type = ".$data[$i]['type']." WHERE s.room=".$data['id']." AND s.row_no=".$data[$i]['row_no']." AND s.seat_no = ".$data[$i]['seat_no'];
+		$query = $em->createQuery($dql);
+		$seat = $query->getResult();
+		print_r($seat);
+		$em -> clear();
+		
+		}*/
+		
+	
+	for($i=0; $i<sizeof($data)-1; $i++){
 		$qb = $em -> createQueryBuilder();
 		$qb -> update('Seat', 's')
 			-> set('s.type', '?1')
@@ -71,11 +82,10 @@ class RoomsModel {
 				3 => $data[$i]['row_no'],
 				4 => $data[$i]['seat_no']));
 		$query = $qb->getQuery();
-		$num = $query->execute();
+		$result = $query->execute();
 		}
-			echo sizeof($data);
-		print_r($data);
-		
+		print_r($result);
+	
 	}
 
 }

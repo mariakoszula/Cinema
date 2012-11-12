@@ -1,6 +1,7 @@
 <?php
 class Router{
 	function __construct() {
+		
 		$url = isset($_GET['page_url']) ? $_GET['page_url'] : null;
 		$url = rtrim($url, '/');
 		$url = filter_var($url, FILTER_SANITIZE_URL);

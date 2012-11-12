@@ -49,7 +49,7 @@
 			}}
 			$data = array_merge($id, $seat);
 			$this->view->save = $this->model->save($data);
-			header('Location: '.URL.'rooms');
+			//header('Location: '.URL.'rooms');
 			
 	}
 }

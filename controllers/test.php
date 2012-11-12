@@ -1,8 +1,17 @@
 <?php
 class Test extends Controller{
        function __construct(){
-       require_once ("doctrine/bootstrap.php");
-       /*       $user = new Users();
+echo 'adsfaf';
+	$doctrine = new Doctrine();
+
+	
+       /*
+	$doctrine = new Doctrine();
+$user = new models\User;
+$doctrine->em->persist($user);
+$doctrine->em->flush();
+
+       $user = new Users();
                 $user->setName("Maria");
                 $user->setLastName("Koszucka");
                 $user->setRole("client");
@@ -14,11 +23,11 @@ class Test extends Controller{
 $em -> persist($user);
 $em->flush();*/
 ///echo "Created " . $user->getId(). "\n Imie ".$user->getName();
-/*$dql = "SELECT a from Users a";
-$results = $em->createQuery($dql)->getResult();
+$dql = "SELECT a from Users a";
+$results = $doctrine->em->createQuery($dql)->getResult();
 print_r($results[1]);
 //echo get_class($results[0]->getName());
-
+/*
 		$dql = "SELECT a from Users a";
 		$results = $em->createQuery($dql)->getResult();
 		print_r ($results);

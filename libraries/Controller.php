@@ -3,7 +3,6 @@
 	class Controller{
 		function __construct(){
 			$this -> view = new View();
-		
 		}
 		public function loadModel($name){
 		$path_to_file = 'models/'.$name.'Model.php';
