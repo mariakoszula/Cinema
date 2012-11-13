@@ -7,12 +7,13 @@
 	
 	
 	function index(){
-			$this->view->todaysShows = $this->model->todaysShows();
+			$this->view->index = $this->model->index();
 			$this->view->getView("index/index");
 		}
 		
 		function test(){
 			$this->model->test();
 		}
+		
 	}
 ?>

@@ -70,5 +70,7 @@ class Showing {
 	public function getBprice() {
 		return $this->bprice;
 	}
+	
+
 }
 ?>
