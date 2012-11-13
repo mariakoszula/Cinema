@@ -7,6 +7,7 @@
 	
 	
 	function index(){
+			$this->view->todaysShows = $this->model->todaysShows();
 			$this->view->getView("index/index");
 		}
 		

@@ -39,7 +39,7 @@ class Showing {
 	private $bprice;
 
 
-	public function __construct($room, $movie, $tstart, $tend, $bprice){
+	public function __construct(Room $room, Movie $movie, $tstart, $tend, $bprice){
 		$this->room = $room;
 		$this->movie = $movie;
 		$this->tstart = $tstart;

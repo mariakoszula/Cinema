@@ -26,6 +26,9 @@ class ManageShowsModel {
 	/*	$show = $em -> find('Showing', 1);
 		$start_time = $show->getTstart();
 		print_r($start_time);*/
+	
+		//@TODO lista seansów (??)
+		
 		$rqb = $em -> createQueryBuilder();
 		$rqb -> select('r.id', 'r.name')
 			-> from('Room', 'r')
@@ -40,6 +43,7 @@ class ManageShowsModel {
 	
 	public function save_show($data){
 		require_once ("bootstrap.php");
+		//@TODO aby nie można było umieścić nie istenijących sensów
 		$movie = $em -> find('Movie', $data['movie']);
 		$runtime = $movie->getRuntime();
 		date_default_timezone_set('Europe/Berlin');

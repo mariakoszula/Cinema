@@ -13,7 +13,12 @@ class Seat{
 	/** @Column(name="seat_no", type="smallint")**/
 	private  $seat_no;
 	
-	/** @ManyToOne (targetEntity="Room", inversedBy="id")**/
+    /**
+     * @ManyToOne(targetEntity="Room")
+     * @JoinColumns({
+     * @JoinColumn(name="room_id", referencedColumnName="id")
+     * })
+     */
 	protected $room;
 	
 	/** @Column(name="type", type="boolean")**/
