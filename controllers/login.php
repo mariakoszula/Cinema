@@ -12,6 +12,8 @@
 		function check(){
 			$this->model->check();
 		}
+		
+		
 	}
 	
 ?>

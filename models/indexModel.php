@@ -6,8 +6,6 @@ class IndexModel{
 	
 	public function index(){
  		require "bootstrap.php";
- 		
- 		
  		date_default_timezone_set('Europe/Berlin');
 		$now = new DateTime("now");
 		$now = $now->format('Y-m-d H:i:s');
@@ -18,7 +16,7 @@ class IndexModel{
 		$until = $until->format('Y-m-d H:i:s');
 			
 		$qb = $em->createQueryBuilder();
-		$qb	->select('s. id, s.tstart, m.title, m.desc, m.runtime')
+		$qb	->select('s.id, s.tstart, m.title, m.desc, m.runtime')
 			->from('Showing', 's')
 			->innerJoin('Movie', 'm', 'WITH', 's.movie = m.id')
 			->where($qb->expr()->between('s.tstart', '?1', '?2'))

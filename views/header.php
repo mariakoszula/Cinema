@@ -29,8 +29,10 @@
 				 	echo "<a href='".URL."manageShows'>Zarządzenie repertuarem</a>";
 					break;
 				case "client":
-				 	echo "<a href='".URL."'>Moje konto</a>";
+					echo "<a href='".URL."login/edit'>Wybierz seans</a>";
 					echo "<a href='".URL."'>Ranking filmów</a>";
+					echo "<a href='".URL."'>Moje konto</a>";
+					echo "<a href='".URL."login/edit'>Edytuj profil</a>";
 					break;
 			}
 	if($_SESSION['loggedIn']==true){
