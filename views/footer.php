@@ -1,6 +1,9 @@
+			</div>
+		</div>
+	</div>
 </div>
 <div id="footer">
-	Footer
+	Serwis kino
 </div>
 </body>
 </html>
