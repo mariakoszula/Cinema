@@ -1,4 +1,4 @@
-<h1>Login</h1>
+
 
 <form action="<?php URL;?>login/check" method="post">
 	<label>Login</label><input type="text" name="login" required="required"/><br/>

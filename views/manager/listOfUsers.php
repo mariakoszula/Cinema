@@ -1,5 +1,5 @@
-
 <?php
+
 echo "<table>";
 foreach ($this->listOfUsers as $key => $value){
 		echo "<tr>";
