@@ -24,12 +24,16 @@ class ReservationModel {
 		$_SESSION['ticket'] = $ticket;
 		
 		$qb = $em->createQueryBuilder();
-		$qb->select('d.type, d.fraction')
+		$qb->select('d.id, d.type, d.fraction')
 			->from('Discount', 'd')
 			->orderby('d.fraction', 'DESC');
 		$query = $qb->getQuery(); 	
 		$discount = $query->getArrayResult();
 		return $discount;
+	 }
+	 
+	 public function save(){
+	 	print_r($_SESSION);
 	 }
 }
 ?>

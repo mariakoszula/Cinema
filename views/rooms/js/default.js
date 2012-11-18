@@ -1,4 +1,4 @@
-function doSeat(id)
+function doSeatRoom(id)
 {
 	//@TODO jak kliknie drugi raz to się odkliknie itp.
 		$("#"+id).attr('disabled', true);

@@ -6,9 +6,9 @@
 <title>Cinema</title>
 <link rel="stylesheet" href="<?php echo URL;?>public/Style/default.css" type="text/css"/>
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/jquery.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>/views/rooms/js/default.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>/views/showing/js/default.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>/views/reservation/js/default.js"></script>
+<script type="text/javascript" src="<?php echo URL;?>views/rooms/js/default.js"></script>
+<script type="text/javascript" src="<?php echo URL;?>views/showing/js/default.js"></script>
+<script type="text/javascript" src="<?php echo URL;?>views/reservation/js/default.js"></script>
 <script src="public/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
 </head>
 

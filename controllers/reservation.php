@@ -15,7 +15,7 @@
 			}*/
 			if($logged == false){
 				session_destroy();
-				header('location: '.URL.'/login');
+				header('location: '.URL.'login');
 				exit;
 			}
 	}
@@ -40,6 +40,23 @@
 
 			$this->view->discountChoice = $this->model->discountChoice($ticket);
 			$this->view->getView('reservation/discountChoice');
+	}
+	
+	public function save(){
+		//unset($_SESSION['show']);
+		//unset($_SESSION['user']);
+		for($t=0; $t<sizeof($_SESSION['ticket']); $t++){
+		$_SESSION['ticket'][$t]['type']=$_POST['type'];
+		if($_POST != 'type') {
+			foreach($_POST as $key => $value){
+				$tmp=explode("##", $key);
+				if($tmp[1]==$_SESSION['ticket'][$t]['id']){
+					$_SESSION['ticket'][$t][$tmp[0]]=$value;
+				}
+			}
+			}
+		}	
+		$this->view->save = $this->model->save();
 	}
 	
 }

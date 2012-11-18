@@ -7,7 +7,7 @@
 
 <p style="text-align: center;"><strong>Ekran</strong></p>
 <hr>
-<table style="align: center">
+<table>
 <?php
 
 for($i=0; $i<sizeof($this->seats)-2; $i++){
@@ -17,7 +17,7 @@ for($i=0; $i<sizeof($this->seats)-2; $i++){
 	}
 echo "<td>";
 		if($this->seats[$i]['type']==false) echo "<button type='button' class='seats_disabled' id='".$this->seats[$i]['row_no']."S".$this->seats[$i]['seat_no']."' disabled>R:".$this->seats[$i]['row_no']."<br/> M:".$this->seats[$i]['seat_no']."</button></td>";
-		elseif($this->seats[$i]['type']==true) echo "<button type='button' class='seats_is' id='".$this->seats[$i]['row_no']."S".$this->seats[$i]['seat_no']."' onclick='doSeat(id)'>R:".$this->seats[$i]['row_no']."<br/> M:".$this->seats[$i]['seat_no']."<input type='hidden' id='R".$this->seats[$i]['row_no']."S".$this->seats[$i]['seat_no']."'/></button></td>";
+		elseif($this->seats[$i]['type']==true) echo "<button type='button' class='seats_is' id='".$this->seats[$i]['row_no']."S".$this->seats[$i]['seat_no']."' onclick='doSeatRoom(id)'>R:".$this->seats[$i]['row_no']."<br/> M:".$this->seats[$i]['seat_no']."<input type='hidden' id='R".$this->seats[$i]['row_no']."S".$this->seats[$i]['seat_no']."'/></button></td>";
 	if($this->seats[$i]['row_no']!=$this->seats[$i+1]['row_no'] ){
 		echo "</tr>";
 	}

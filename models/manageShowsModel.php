@@ -60,6 +60,22 @@ class ManageShowsModel {
 		$show = new Showing($room, $movie, $start_time, $end_time, $data['bprice']);
 		$em-> persist($show);
 		$em->flush();
+		$id = $show->getId();
+		
+		$qb = $em->createQueryBuilder();
+		$qb -> select($qb -> expr()-> count('s.id'))
+			-> from('Showing', 's')
+			-> where('s.id = ?1')
+			-> setParameter(1, $id);
+		$query = $qb->getQuery();
+		$single = $query->getSingleResult();
+		//@TODO jakoś ładnie wiadomość wyświetlać
+		if($single[1] == 0){
+			 echo "kolizja"; 
+			 $em->remove($show);
+		}
+		else echo "Dodano seans";
+			
 	}
 	
 	
