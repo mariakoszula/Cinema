@@ -33,7 +33,26 @@ class ReservationModel {
 	 }
 	 
 	 public function save(){
-	 	print_r($_SESSION);
+	 	require_once ("bootstrap.php");
+
+	 	print_r($_SESSION['ticket'][0]);
+	 	
+	 	for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
+		$qb = $em -> createQueryBuilder();
+		$qb -> update('Ticket', 't')
+			-> set('t.type', '?1')
+			-> set('t.discount', '?2')
+			-> set('t.user', '?3')
+			-> where('t.id = ?4');
+		$qb->setParameters(array(
+				1 => $_SESSION['ticket'][$i]['type'],
+				2 => $_SESSION['ticket'][$i]['discount'],
+				3 => $_SESSION['ticket'][$i]['user'],
+				4 => $_SESSION['ticket'][$i]['id']));
+		$query = $qb->getQuery();
+		$result = $query->execute();
+		print_r($result);
+		}
 	 }
 }
 ?>

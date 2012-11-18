@@ -138,3 +138,6 @@ table.left{
 button.choice{
 	background-color: green;
 }
+button.occupied{
+	background-color: red;
+}

@@ -43,8 +43,8 @@
 	}
 	
 	public function save(){
-		//unset($_SESSION['show']);
-		//unset($_SESSION['user']);
+		unset($_SESSION['show']);
+		unset($_SESSION['user']);
 		for($t=0; $t<sizeof($_SESSION['ticket']); $t++){
 		$_SESSION['ticket'][$t]['type']=$_POST['type'];
 		if($_POST != 'type') {

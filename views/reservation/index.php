@@ -19,7 +19,7 @@ echo "wybor miejsc z tablicy; tablica wygenerowana z ticketÃ³w i disabled te ktÃ
 			if($s == $this->seatChoice[$i]['seat_no'] && $r == $this->seatChoice[$i]['row_no']){
 				echo "<button type='button'  value='".$r."S".$s."' id='".$this->seatChoice[$i]['id']."' ";
 				$seat_state = $this->seatChoice[$i]['type']=='available' ?  'class="available" onclick="doSeat(id, value)"' : 'class="occupied" disabled';
-				echo $seat_state."'></button>";
+				echo $seat_state."></button>";
 			}
 		}
 		

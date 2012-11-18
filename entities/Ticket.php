@@ -31,11 +31,10 @@ class Ticket
      * @Column(name="seat_no", type="integer", nullable=false)
      */
     private $seat_no;
-
     /**
      * @var string $type
      *
-     * @Column(name="type", type="string", nullable=true)
+     * @Column(name="type", type="string", nullable=true, columnDefinition="ENUM('available', 'sold', 'reserved', 'unavailable')")
      */
     private $type;
 
