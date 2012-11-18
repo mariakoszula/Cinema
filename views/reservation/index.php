@@ -1,12 +1,10 @@
 <?php
 echo "wybor miejsc z tablicy; tablica wygenerowana z ticketów i disabled te które mają wartość reserved, sold lub " .
-		"not available || generowanie nie disabled tych co mają wartość available(mądrzejsze)";
-
-echo sizeof( $this->seatChoice);		
+		"not available || generowanie nie disabled tych co mają wartość available(mądrzejsze)";	
+		
 ?>		
-
 <div id="seats">
-<form action="<?php echo URL?>" method="post" name="seats">
+<form action="<?php echo URL?>reservation/discountChoice"  method="post" name="seats">
 <p><strong>Ekran</strong></p>
 <hr>
 <table class="center">
@@ -18,9 +16,9 @@ echo sizeof( $this->seatChoice);
 		for($s=1; $s<=20; $s++){
 			echo "<td>";
 		for($i=0; $i<sizeof($this->seatChoice); $i++){
-			if($s == $this->seatChoice[$i]['seat_no'] && $r ==$this->seatChoice[$i]['row_no']){
-				echo "<button type='button'  id='".$r."S".$s."' ";
-				$seat_state = $this->seatChoice[$i]['type']=='available' ?  'class="available" onclick="doSeat(id)"' : 'class="occupied" disabled';
+			if($s == $this->seatChoice[$i]['seat_no'] && $r == $this->seatChoice[$i]['row_no']){
+				echo "<button type='button'  value='".$r."S".$s."' id='".$this->seatChoice[$i]['id']."' ";
+				$seat_state = $this->seatChoice[$i]['type']=='available' ?  'class="available" onclick="doSeat(id, value)"' : 'class="occupied" disabled';
 				echo $seat_state."'></button>";
 			}
 		}

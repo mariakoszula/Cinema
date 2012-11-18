@@ -84,7 +84,7 @@ class RoomsModel {
 		$query = $qb->getQuery();
 		$result = $query->execute();
 		}
-		print_r($result);
+	//	print_r($result);
 	
 	}
 
