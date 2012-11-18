@@ -24,7 +24,6 @@ echo "<td>";
 }
 ?>
 </table>
-<input type="hidden" name='id' value='<?php echo $this->seats['id']?>'/>
 <button type="submit">Zapisz</button>
 </form>
 <p id="info"></p>

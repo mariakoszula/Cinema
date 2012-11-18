@@ -1,89 +1,108 @@
 <?php
-/** @Entity
-* @Table(name="ticket")
-**/
-class Ticket {
-	/** @Id @Column(type="integer") @GeneratedValue */
-	protected $id;
 
-	/** @Column(name="name", type="string")*/
-	private $name;
+/**
+ * Ticket
+ *
+ * @Table(name="ticket")
+ * @Entity
+ */
+class Ticket
+{
+    /**
+     * @var integer $id
+     *
+     * @Column(name="id", type="integer", nullable=false)
+     * @Id
+     * @GeneratedValue(strategy="SEQUENCE")
+     * @SequenceGenerator(sequenceName="ticket_id_seq", allocationSize=1, initialValue=1)
+     */
+    private $id;
 
-	/** @Column(name="last_name", type="string")*/
-	private $last_name;
+    /**
+     * @var integer $row_no
+     *
+     * @Column(name="row_no", type="integer", nullable=false)
+     */
+    private $row_no;
 
-	/** @Column(name="role", type="string", columnDefinition="ENUM('worker','client','manager')")*/
-	private $role;
+    /**
+     * @var integer $seat_no
+     *
+     * @Column(name="seat_no", type="integer", nullable=false)
+     */
+    private $seat_no;
 
-	/** @Column(name="login", type="string", unique=true)*/
-	private $login;
+    /**
+     * @var string $type
+     *
+     * @Column(name="type", type="string", nullable=true)
+     */
+    private $type;
 
-	/** @Column(name="password", type="string")*/
-	private $password;
+    /**
+     * @var Showing
+     *
+     * @ManyToOne(targetEntity="Showing")
+     * @JoinColumns({
+     *   @JoinColumn(name="showing_id", referencedColumnName="id")
+     * })
+     */
+    private $showing;
 
-	/** @Column(name="phone", type="string")*/
-	private $phone;
+    /**
+     * @var Discount
+     *
+     * @ManyToOne(targetEntity="Discount")
+     * @JoinColumns({
+     *   @JoinColumn(name="discount_id", referencedColumnName="id")
+     * })
+     */
+    private $discount;
 
-	/** @Column(name="email", type="string", unique=true)*/
-	private $email;
+    /**
+     * @var Users
+     *
+     * @ManyToOne(targetEntity="Users")
+     * @JoinColumns({
+     *   @JoinColumn(name="users_id", referencedColumnName="id")
+     * })
+     */
+    private $user;
 
 	public function getId() {
 		return $this->id;
 	}
-	public function getName() {
-		return $this->name;
+	public function getRow() {
+		return $this->row_no;
 	}
 
-	public function getLastName() {
-		return $this->last_name;
+	public function getSeat() {
+		return $this->seat_no;
 	}
 	
-	public function getRole() {
-		return $this->role;
+	public function getTypes() {
+		return $this->type;
+	}
+
+	public function getShow() {
+		return $this->showing;
 	}
 	
-	public function getPhone() {
-		return $this->phone;
-	}
-
-	public function getEmail() {
-		return $this->email;
+	public function getDisc() {
+		return $this->discount;
 	}
 	
-	public function getLogin() {
-		return $this->login;
-	}
-	
-	public function getPassword() {
-		return $this->password;
+	public function getUser() {
+		return $this->user;
 	}
 
-	public function setName($name) {
-		$this->name = $name;
+	public function setDiscount($discount){
+		$this->discount = $discount;
 	}
-
-	public function setLastName($last_name) {
-		$this->last_name = $last_name;
+	public function setTypes($type){
+		$this->types = $type;
 	}
-
-	public function setRole($role) {
-		$this->role = $role;
-	}
-
-	public function setLogin($login) {
-		$this->login = $login;
-	}
-
-	public function setPassword($password) {
-		$this->password = $password;
-	}
-
-	public function setPhone($phone) {
-		$this->phone = $phone;
-	}
-
-	public function setEmail($email) {
-		$this->email = $email;
+	public function setUser($user){
+		$this->user = $user;
 	}
 }
-?>

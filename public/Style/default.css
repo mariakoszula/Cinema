@@ -1,24 +1,22 @@
 
 body {
-	text-align: justify;
 	font-family:   'Arvo', "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 100%;
 	text-align: justify;
 	line-height:1em;
 	background: url('../Images/tail-top.gif') repeat-x left top #1d1d1d;
 	color: #bfbfbf;
 }
 
-ul {	line-style:none;}
+ul {line-style:none;}
 li{ display: inline;}
 h1, h2, h3, h4, h5 {
 	margin: 10;
 	margin: 0px;
-        padding: 5px;
-        font-family: 'Arvno', serif;
+    padding: 5px;
+    font-family: 'Arvno', serif;
 	font-size: 100%;
-        font-weight: 400;
-        color: #bfbfbf;
+    font-weight: 400;
+    color: #bfbfbf;
 }
 #header {
 	width: 800px;
@@ -103,6 +101,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #content{
+	text-align: center;
 	float: center;
 	color: #bfbfbf;
 	padding: 30px 0 39px 50px;
@@ -112,7 +111,30 @@ h1, h2, h3, h4, h5 {
 	margin:  auto;
 	width: 800px;
 	margin-top: 50px;
-	
+}
+#seats{
+	margin: auto;
+	width: 80%;
+}
+#seats table.center{
+	margin-left:auto;
+	margin-right:auto;
 	
 }
+button.next{
+	float: right;
+	font-size: 20px;
+}
+button#add_show{
+	float: right;
+	font-size: 20px;
+}
 
+table.left{
+	text-align: left;
+	margin-left:auto;
+	margin-right:auto;
+}
+button.choice{
+	background-color: green;
+}
