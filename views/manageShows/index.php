@@ -22,7 +22,7 @@ echo "</table>";
 	<tr><td><label>Tytuł: </label></td><td><input type="text" name="title" required="required"/></td></tr>
 	<tr><td><label>Opis: </label></td><td><textarea rows="10" cols="20" type="text" name="description"></textarea></td></tr>
 	<tr><td><label>Czas trwania [min]: </label></td><td><input type="text" name="time" required="required"/></td></tr>
-	<tr><td><label>Categoria</label></td><td></td></tr>
+	<tr><td><label>Categoria</label><select class="cat" name="category"></select></td></tr>
 	<tr><td colspan="2"><input id="add_show" type="submit" value="Dodaj" name="submit"/></td></tr>
 </form>	
 </td>
