@@ -34,11 +34,10 @@ class ReservationModel {
 	 
 	 public function save(){
 	 	require_once ("bootstrap.php");
-
-	 	print_r($_SESSION['ticket'][0]);
-	 	
-	 	for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
-		$qb = $em -> createQueryBuilder();
+	 //	$flag = true;
+	 //	$ticket = new Ticket();
+	 		for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
+		$qb= $em ->createQueryBuilder();
 		$qb -> update('Ticket', 't')
 			-> set('t.type', '?1')
 			-> set('t.discount', '?2')
@@ -51,8 +50,47 @@ class ReservationModel {
 				4 => $_SESSION['ticket'][$i]['id']));
 		$query = $qb->getQuery();
 		$result = $query->execute();
-		print_r($result);
-		}
+		if($result==0) $flag = false;
+	 		}	
+	 	if($flag == false){ 
+	 		echo "zajete miejsca";
+	 		$em -> remove();
+		/*
+		 * try{
+	 		$em->getConnection()->beginTransaction();
+		 * for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
+		$ticket = $em->find('Ticket', $_SESSION['ticket'][$i]['id']);
+		$ticket->setDiscount($_SESSION['ticket'][$i]['discount']);
+		$ticket->setTypes($_SESSION['ticket'][$i]['type']);
+		$ticket->setUser($_SESSION['ticket'][$i]['user']);
+		$em->persist($ticket);
+		$em->flush();
+		$em->getConnection()->commit();
+		//
+	 	}
+		}catch (Execption $e){
+			$em->getConnection()->rollback();
+			$em->close();
+			throw $e;
+	 	}*/
+	 	//@Jest kolizja
+	 		/*for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
+		$qb= $em ->createQueryBuilder();
+		$qb -> update('Ticket', 't')
+			-> set('t.type', '?1')
+			-> set('t.discount', '?2')
+			-> set('t.user', '?3')
+			-> where('t.id = ?4');
+		$qb->setParameters(array(
+				1 => $_SESSION['ticket'][$i]['type'],
+				2 => $_SESSION['ticket'][$i]['discount'],
+				3 => $_SESSION['ticket'][$i]['user'],
+				4 => $_SESSION['ticket'][$i]['id']));
+		$query = $qb->getQuery();
+		$result = $query->execute();
+	 		}*/
+		 
+	//	unset($_SESSION['ticket']);
 	 }
 }
 ?>
