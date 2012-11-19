@@ -8,11 +8,15 @@
 			$this->view->getView('login/index');
 			
 		}
+		public function logout(){
+			session_destroy();
+			header('location: ../login');
+			exit;
+		}
 		
 		function check(){
 			$this->model->check();
 		}
-		
 		
 	}
 	

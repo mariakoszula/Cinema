@@ -22,7 +22,7 @@
 					<li><a href="<?php echo URL;?>register">Rejstracja</a></li>
 					<?php endif;?>
 					<?php if($_SESSION['role']=='client'):?>
-					<li><a href="<?php echo URL;?>login/edit">Edytuj profil</a></li>
+					<li><a href="<?php echo URL;?>usersAction/edit">Edytuj profil</a></li>
 					<?php endif;?>
 					<?php	if($_SESSION['loggedIn']==true){
 					echo "<li><a href='".URL."manager/logout'>Wyloguj</a></li>";
@@ -53,7 +53,7 @@
 				case "client":
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."'>Ranking filmów</a></li>";
-					echo "<li><a href='".URL."'>Moje konto</a></li>";
+					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li>";
 					break;
 					}
 				?>
