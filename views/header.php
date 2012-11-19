@@ -21,7 +21,7 @@
 				<?php if($_SESSION['loggedIn']==false):?>
 					<li><a href="<?php echo URL;?>register">Rejstracja</a></li>
 					<?php endif;?>
-					<?php if($_SESSION['role']=='client'):?>
+					<?php if($_SESSION['role']=='client' || $_SESSION['role']=='worker' ):?>
 					<li><a href="<?php echo URL;?>usersAction/edit">Edytuj profil</a></li>
 					<?php endif;?>
 					<?php	if($_SESSION['loggedIn']==true){
@@ -39,7 +39,7 @@
 					switch($_SESSION['role']){
 				case "manager": 
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
-					echo "<li><a href='".URL."'>Ranking filmów</a></li>";
+					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 					echo "<li><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
 					echo "<li><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
 					echo "<li><a href='".URL."rooms'>Sale</a></li>";
@@ -47,12 +47,12 @@
 					break;
 				case "worker":
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
+					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 				 	echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
-				 	echo "<li><a href='".URL."login/edit'>Edytuj profil</a></li>";
 					break;
 				case "client":
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
-					echo "<li><a href='".URL."'>Ranking filmów</a></li>";
+					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li>";
 					break;
 					}
