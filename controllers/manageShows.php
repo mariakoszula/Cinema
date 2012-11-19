@@ -44,9 +44,10 @@
 			$data['title']=$_POST['title'];
 			$data['desc']=$_POST['description'];
 			$data['time']=$_POST['time'];
-			
+			$data['category']=$_POST['category'];
 			$this->view->add_movie = $this->model->add_movie($data);
 			header ('Location: ../manageShows');
 	}
+
 }
 ?>
