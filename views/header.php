@@ -46,12 +46,12 @@
 					echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
 					break;
 				case "worker":
-					echo "<li><a href='".URL."login/edit'>Wybierz seans</a></li>";
+					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 				 	echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
 				 	echo "<li><a href='".URL."login/edit'>Edytuj profil</a></li>";
 					break;
 				case "client":
-					echo "<li><a href='".URL."login/edit'>Wybierz seans</a></li>";
+					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."'>Ranking filmów</a></li>";
 					echo "<li><a href='".URL."'>Moje konto</a></li>";
 					break;
