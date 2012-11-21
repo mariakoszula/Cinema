@@ -68,6 +68,7 @@ class Ticket
      */
     private $user;
 
+
 	public function getId() {
 		return $this->id;
 	}
