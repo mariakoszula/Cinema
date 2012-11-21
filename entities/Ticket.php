@@ -95,13 +95,13 @@ class Ticket
 		return $this->user;
 	}
 
-	public function setDiscount($discount){
+	public function setDiscount(Discount $discount){
 		$this->discount = $discount;
 	}
 	public function setTypes($type){
-		$this->types = $type;
+		$this->type = $type;
 	}
-	public function setUser($user){
+	public function setUser(Users $user){
 		$this->user = $user;
 	}
 }

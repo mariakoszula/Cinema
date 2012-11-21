@@ -34,9 +34,9 @@ class ReservationModel {
 	 
 	 public function save(){
 	 	require_once ("bootstrap.php");
-	 //	$flag = true;
+	 	$flag = true;
 	 //	$ticket = new Ticket();
-	 		for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
+	/* 		for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
 		$qb= $em ->createQueryBuilder();
 		$qb -> update('Ticket', 't')
 			-> set('t.type', '?1')
@@ -49,47 +49,42 @@ class ReservationModel {
 				3 => $_SESSION['ticket'][$i]['user'],
 				4 => $_SESSION['ticket'][$i]['id']));
 		$query = $qb->getQuery();
-		$result = $query->execute();
-		if($result==0) $flag = false;
-	 		}	
-	 	if($flag == false){ 
-	 		echo "zajete miejsca";
-	 		$em -> remove();
-		/*
-		 * try{
-	 		$em->getConnection()->beginTransaction();
-		 * for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
-		$ticket = $em->find('Ticket', $_SESSION['ticket'][$i]['id']);
-		$ticket->setDiscount($_SESSION['ticket'][$i]['discount']);
-		$ticket->setTypes($_SESSION['ticket'][$i]['type']);
-		$ticket->setUser($_SESSION['ticket'][$i]['user']);
-		$em->persist($ticket);
-		$em->flush();
-		$em->getConnection()->commit();
-		//
-	 	}
+		print_r($query);
+	 		}*/
+	 		
+		//$result = $query->execute();
+		//if($result==0) $flag = false;
+	 	//	}	
+	 	//if($flag == false){ 
+	 		//echo "zajete miejsca";
+	 		//$em -> remove();
+		for($i=0; $i<sizeof($_SESSION['ticket']); $i++){ 
+	
+	 		
+			$ticket[$i] = $em->find('Ticket', $_SESSION['ticket'][$i]['id']);
+			$discount = $em->find('Discount', $_SESSION['ticket'][$i]['discount']);
+			$user = $em->find('Users', $_SESSION['ticket'][$i]['user']);
+			$ticket[$i]->setDiscount($discount);
+			if($ticket[$i]->getTypes() != 'available') $flag = false;
+			else $ticket[$i]->setTypes($_SESSION['ticket'][$i]['type']);
+			$ticket[$i]->setUser($user);
+		}
+		if($flag == true){
+		for($k=0; $k<sizeof($ticket); $k++){
+		try{
+			$em->getConnection()->beginTransaction();
+			$em->persist($ticket[$k]);
+			$em->flush();
+			$em->getConnection()->commit();
+		
 		}catch (Execption $e){
 			$em->getConnection()->rollback();
 			$em->close();
 			throw $e;
-	 	}*/
-	 	//@Jest kolizja
-	 		/*for($i=0; $i<sizeof($_SESSION['ticket']); $i++){
-		$qb= $em ->createQueryBuilder();
-		$qb -> update('Ticket', 't')
-			-> set('t.type', '?1')
-			-> set('t.discount', '?2')
-			-> set('t.user', '?3')
-			-> where('t.id = ?4');
-		$qb->setParameters(array(
-				1 => $_SESSION['ticket'][$i]['type'],
-				2 => $_SESSION['ticket'][$i]['discount'],
-				3 => $_SESSION['ticket'][$i]['user'],
-				4 => $_SESSION['ticket'][$i]['id']));
-		$query = $qb->getQuery();
-		$result = $query->execute();
-	 		}*/
-		 
+	 	}	
+		}
+	 	}else echo 'ktorys z biletow zajety, tu trzeba zrobic msg i przkierwoać jakos spowortem do strony z siedzeniami z odpowiednim showing id';
+			
 	//	unset($_SESSION['ticket']);
 	 }
 }
