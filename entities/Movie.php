@@ -12,9 +12,6 @@ class Movie {
 
 	/** @Column(name="description", type="string")*/
 	private $desc;
-//@TODO kategorie
-	/** @Column(name="category_id", type="integer")*/
-	private $category;
 
 	/** @Column(name="rating", type="float")*/
 	private $rating;
@@ -25,12 +22,22 @@ class Movie {
 	/** @Column(name="runtime", type="integer")*/
 	private $runtime;
 
+	/**
+     * @var Category
+     *
+     * @ManyToOne(targetEntity="Category")
+     * @JoinColumns({
+     *   @JoinColumn(name="category_id", referencedColumnName="id")
+     * })
+     */
+    private $category;
 
-	public function __construct($title, $desc, $is_on_screan, $runtime){
+	public function __construct($title, $desc, $is_on_screan, $runtime, Category $category){
 		$this->title = $title;
 		$this->desc = $desc;
 		$this->is_on_screan = $is_on_screan;
 		$this->runtime = $runtime;
+		$this->category = $category;
 	}
 	
 	public function getId() {
@@ -54,6 +61,9 @@ class Movie {
 	
 	public function getRating() {
 		return $this->rating;
+	}
+	public function getCategory(){
+		return $this_->category;
 	}
 }
 ?>

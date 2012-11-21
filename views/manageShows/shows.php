@@ -5,11 +5,10 @@
 //echo $this->shows['movie'];
 ?>
 <h1>Dodaj seans</h1>
-<div id="form">
-<form id="show_form1" method="POST" action="<? echo URL;?>manageShows/save_show" onsubmit="return checkDate();">
-	
-	<label>Dzień: </label><input type="date" name="date" required="required"><br/>
-	<label>Godzina(np. 12:00): </label><input type="text" name="hour"><br/>
+<form id="show_form1" action="<? echo URL;?>manageShows/save_show" onsubmit="return checkDate()" method="post">
+
+	<label>Dzień: </label><input type="date" name="start_date" required="required"><br/>
+	<label>Godzina(np. 12:00): </label><input type="text" name="hour" required="required"><br/>
 	<label>Sala: </label><select name="sala" required="required">
 	<?php for($i=0; $i<sizeof($this->shows)-1; $i++){?>
 	<option value="<?php echo $this->shows[$i]['id'];?>">

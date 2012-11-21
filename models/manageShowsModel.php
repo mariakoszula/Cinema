@@ -81,7 +81,8 @@ class ManageShowsModel {
 	
 	function add_movie($data) {
 		require_once ("bootstrap.php");
-		$movie = new Movie($data['title'], $data['desc'], false, $data['time']);
+		$category = $em->find('Category', $data['category']);
+		$movie = new Movie($data['title'], $data['desc'], false, $data['time'], $category);
 		$em->persist($movie);
 		$em->flush();
 		
