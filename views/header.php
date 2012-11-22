@@ -46,7 +46,7 @@
 					echo "<li><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
 					echo "<li><a href='".URL."rooms'>Sale</a></li>";
 					echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
-					echo "<li><a href='".URL."'>Baza biletów</a></li></ul></div>";
+					echo "<li><a href='".URL."tickets'>Baza biletów</a></li></ul></div>";
 					break;
 				case "worker":
 					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";

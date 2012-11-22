@@ -1,8 +1,7 @@
 				
 			</div>
-		</div>
 <div id="footer">
-	Serwis kino
+	Zapraszamy do skorzystania z systemu obsługi mutlikina
 </div>
 </div>
 </body>

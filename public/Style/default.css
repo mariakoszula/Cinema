@@ -3,11 +3,12 @@ body {
 	font-family:   'Arvo', "Trebuchet MS", Arial, Helvetica, sans-serif;
 	line-height:1em;
 	background: url('../Images/tail-top.gif') repeat-x left top #1d1d1d;
-	color: #bfbfbf;
+	color: black;
+	min-width: 800px;
 }
 
-#main ul {line-style: none;}
-#main li{display:inline;}
+ul {line-style: none;}
+li{display:inline;}
 #main{
 	text-align: center;
 	float: center;
@@ -21,13 +22,14 @@ body {
     font-family: 'Arvno', serif;
 	font-size: 100%;
     font-weight: 400;
-    color: #bfbfbf;
+    color: black;
 }
 
 #header {
-	width: 800px;
-	height: 70px;
+	width: 900px;
+	height: 60px;
 	margin: auto;
+	margin-left:
 	}
 
 #header h1 {
@@ -66,8 +68,7 @@ body {
 #top_menu{
 	float: center;
 	text-align: left;
-	width: 800px;
-	height: 70px;
+	width: 900px;
 	margin: auto;
 	font-size: 20px;
 	color: #FFFFFF;
@@ -75,10 +76,10 @@ body {
 	
 }
 
-#top_menu ul li a{
+#top_menu li a{
 	display: inline-block;
 	list-style: none;
-	width: 150px;
+	width: 20%;
 	height: 20px;
 	padding: 15px;
 	background-color: #000000;
@@ -92,6 +93,7 @@ body {
 
 
 #top_menu .current_page a{
+		border:2px solid #1d1d1d;
 		border-radius: 5px;
 		padding: 15px;
         background: #E8E8E8 ;
@@ -106,14 +108,15 @@ body {
 	color: #d72a18;
 }
 #right_menu{
-	width: 14%;
+	width: 200px;
 	font-size: 20px;
 	color: #FFFFFF;
 	float: left;
-	margin-left: 13%;
-	margin-right: 73%;
+	margin-left: 150px;
 	text-align: center;
 	display: block;
+	position: absolute;
+	background: transparent;
 }
 
 #right_menu ul li a{
@@ -128,7 +131,6 @@ body {
 	text-decoration: none;
     color: #FFFFFF;
 	margin-bottom: 5px;
-	margin-right: 800px;
 	display: list-item;
 	text-align: -webkit-match-parent;
 }
@@ -149,23 +151,29 @@ body {
 }
 
 #content{
-/* 	background: #E8E8E8 ; */
-	color: #bfbfbf;
-	width: 800px;
-	height: 1200px;
-	overflow: hidden;
-	padding: 10px 0px 20px 0px;
-	margin:  auto;
-	float: center;
+	width: 900px;
+	margin: -80px auto;
+	padding-top: 80px;
+	height: 800px;
+	border-radius: 10px;
+	background-image: url('../Images/banner-bg.gif');
+	background-repeat: no-repeat;
+	background-position: center top; 
+	/* background: #EDEDED; */
+	background-size: 100% 800px;
+	 color: black;
+	float: center; 
 }
 #seats{
 	text-size: 10px;
 	margin: auto;
 	width: 80%;
 }
-#seats table.center{
+table.center{
 	padding: 0px;
 	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
 	
 }
 button.seats_disabled{
@@ -195,6 +203,16 @@ button.choice{
 }
 button.occupied{
 	background-color: red;
+}
+
+#footer{
+	padding-top: 10px;
+	width: 900px;
+	height: 20 px;
+	font-size: 15px;
+	color: white;
+	float: center;
+	margin: auto;
 }
 
 

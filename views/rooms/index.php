@@ -1,5 +1,5 @@
 <?php
-echo "<table>";
+echo "<table class='center'>";
 foreach ($this->listOfRooms as $key => $value){
 		echo "<tr>";
 		echo "<td>".$value['name']."</td>";

@@ -1,11 +1,10 @@
 <h1><?php echo $this->seats['name']?></h1>
 <form action="<?php echo URL?>rooms/save" method="post" name="seats">
 
-<p id="seats" style="text-align: center;"></p>
 
 <p style="text-align: center;"><strong>Ekran</strong></p>
-<hr>
-<table style="align: center">
+
+<table class="center">
 <?php
 
 for($i=0; $i<sizeof($this->seats)-2; $i++){

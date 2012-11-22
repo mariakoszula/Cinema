@@ -1,6 +1,6 @@
 <?php
 
-echo "<table>";
+echo "<table class='center'>";
 foreach ($this->listOfUsers as $key => $value){
 		echo "<tr>";
 		echo "<td>".$value['name']."</td>";
