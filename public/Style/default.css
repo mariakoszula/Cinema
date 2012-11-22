@@ -9,6 +9,12 @@ body {
 
 ul {line-style: none;}
 li{display:inline;}
+img{
+	position:absolute;
+	left:150px;
+	top:70px;
+z-index:-1;
+}
 #main{
 	text-align: center;
 	float: center;
