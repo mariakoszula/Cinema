@@ -73,6 +73,7 @@ class ManageShowsModel {
 		if($single[1] == 0){
 			 echo "kolizja"; 
 			 $em->remove($show);
+			 $em->flush();
 		}
 		else echo "Dodano seans";
 			

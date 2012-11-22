@@ -8,7 +8,8 @@ function doSeat(id, value)
 function check(){
 	var x1 = document.forms["reservation"]["type"][0].checked;
 	var x2 = document.forms["reservation"]["type"][1].checked;
-	if(x1 == false && x2 == false){
+	var x3 = document.forms["reservation"]["type"][2].checked;
+	if(x1 == false && x2 == false && x3 == false){
 		alert("Musisz wybrać czy chcesz zakupić czy zarezerwować bilet.");
 		return false;
 	}

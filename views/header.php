@@ -15,8 +15,9 @@
 
 <body>
 <?php session_start();?>
+<div id="main">
 <div id="header">
-			<div class="row-1"><h1>Kino</h1>
+			<h1>Kino</h1>
 				<ul>
 				<?php if($_SESSION['loggedIn']==false):?>
 					<li><a href="<?php echo URL;?>register">Rejstracja</a></li>
@@ -30,36 +31,44 @@
 					echo "<li><a href='".URL."login'>Zaloguj</a></li>";?>
 					
 				</ul>
-			</div>
-			<div class="nav">
-				<ul>
-					<li class="current_page"><a href="<?php echo URL;?>index">Strona Główna</a></li>
+</div>
+
+				
 		
 					<?php
 					switch($_SESSION['role']){
 				case "manager": 
+					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
-					echo "<li><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
+					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
+					echo "<div id='right_menu'><ul><li class='right_menu'><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
 					echo "<li><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
 					echo "<li><a href='".URL."rooms'>Sale</a></li>";
 					echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+					echo "<li><a href='".URL."'>Baza biletów</a></li></ul></div>";
 					break;
 				case "worker":
+					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
-				 	echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+				 	echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
+				 	echo "<div id='right_menu'><ul><li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+				 	echo "<li><a href='".URL."'>Baza biletów</a></li></ul></div>";
 					break;
 				case "client":
+					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
-					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li>";
+					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
 					break;
-					}
+				default:
+					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li></div>";
+					break;
+				}
 				?>
-			</ul>
-		</div>
-</div>
+
+
 
 <div id="content">
 

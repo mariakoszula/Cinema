@@ -37,7 +37,7 @@
 		print_r($_POST);
 		$this->model->save_show($data);
 		$this->view->save_show = $this->model->save_show;
-		header ('Location: ../manageShows');
+		//header ('Location: ../manageShows');
 	}
 	
 	public function add_movie(){

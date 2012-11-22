@@ -57,6 +57,7 @@
 			}
 		}	
 		$this->view->save = $this->model->save();
+		$this->view->getView('reservation/save');
 	}
 	
 }
