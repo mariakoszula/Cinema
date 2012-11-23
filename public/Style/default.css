@@ -70,6 +70,11 @@ z-index:-1;
 #header ul li a:active {
 	color: #fff;		
 }
+#main_con {
+	width: 1310px;
+	margin: auto;
+	padding-top: 10px;
+}
 
 #top_menu{
 	float: center;
@@ -85,7 +90,7 @@ z-index:-1;
 #top_menu li a{
 	display: inline-block;
 	list-style: none;
-	width: 20%;
+	width: 170px;
 	height: 20px;
 	padding: 15px;
 	background-color: #000000;
@@ -113,19 +118,24 @@ z-index:-1;
 	text-decoration: none;
 	color: #d72a18;
 }
-#right_menu{
+#left_menu{
 	width: 200px;
-	font-size: 20px;
-	color: #FFFFFF;
 	float: left;
-	margin-left: 150px;
 	text-align: center;
 	display: block;
-	position: absolute;
-	background: transparent;
+	
 }
-
-#right_menu ul li a{
+#left_menu p{
+	font-weight: bold;
+}
+#left_menu ul{
+	margin-top: -80px;
+	padding: 5px 10px 10px 10px;
+	border: #d72a18;
+	border-radius: 10px;
+	background: #d72a18;
+}
+#left_menu ul li a{
 	width: 150px;
 	padding: 15px;
 	list-style:none;
@@ -141,14 +151,14 @@ z-index:-1;
 	text-align: -webkit-match-parent;
 }
 
-#right_menu .current_page a{
+#left_menu .current_page a{
 		border-radius: 5px;
 		padding: 15px;
         background: #E8E8E8 ;
 		color: #d72a18;
 }
 
-#right_menu a:hover {
+#left_menu a:hover {
 	padding: 15px;
 	border-radius: 5px;
 	background: #E8E8E8 ;
@@ -165,9 +175,8 @@ z-index:-1;
 	background-image: url('../Images/banner-bg.gif');
 	background-repeat: no-repeat;
 	background-position: center top; 
-	/* background: #EDEDED; */
 	background-size: 100% 800px;
-	 color: black;
+	color: black;
 	float: center; 
 }
 #seats{
@@ -198,11 +207,26 @@ button#add_show{
 	float: right;
 	font-size: 20px;
 }
-
+#movie_list{
+	margin-left: 20px;
+	float: left;
+	padding: 10px;
+}
+#add_movie{
+	margin-right: 20px;
+	float: right;
+	padding: 10px;
+	border: black;
+	border-radius: 5px;
+}
 table.left{
 	text-align: left;
-	margin-left:auto;
+	margin-left: 10px;
 	margin-right:auto;
+}
+table.right{
+	margin-right: 10px;
+	margin-left: auto;
 }
 button.choice{
 	background-color: green;
@@ -214,11 +238,12 @@ button.occupied{
 #footer{
 	padding-top: 10px;
 	width: 900px;
-	height: 20 px;
+	height: 20px;
 	font-size: 15px;
 	color: white;
 	float: center;
 	margin: auto;
+	text-align: center;
 }
 
 

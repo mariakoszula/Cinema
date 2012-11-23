@@ -32,8 +32,8 @@
 					
 				</ul>
 </div>
+<div id="main_con">
 
-				
 		
 					<?php
 					switch($_SESSION['role']){
@@ -42,7 +42,8 @@
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
-					echo "<div id='right_menu'><ul><li class='right_menu'><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
+					echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li>" .
+							"<li class='right_menu'><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
 					echo "<li><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
 					echo "<li><a href='".URL."rooms'>Sale</a></li>";
 					echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
@@ -53,8 +54,8 @@
 					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
 					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 				 	echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
-				 	echo "<div id='right_menu'><ul><li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
-				 	echo "<li><a href='".URL."'>Baza biletów</a></li></ul></div>";
+				 	echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li><li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+				 	echo "<li><a href='".URL."tickets'>Baza biletów</a></li></ul></div>";
 					break;
 				case "client":
 					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";

@@ -4,7 +4,7 @@
 <h1>Dzisiejsze seanse</h1>
 <?php
 
-echo "<table>";
+echo "<table class='center'>";
 $a = $this->index[0];
 	for ($i=0; $i<sizeof($this->index); $i++){
 		echo "<tr>";
