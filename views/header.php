@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Cinema</title>
+<link rel="Shortcut icon" href="<?php echo URL; ?>public/Images/cin_przesk.png" />
 <link rel="stylesheet" href="<?php echo URL;?>public/Style/default.css" type="text/css"/>
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/jquery.js"></script>
 <script type="text/javascript" src="<?php echo URL;?>views/rooms/js/default.js"></script>
