@@ -47,7 +47,7 @@
 					echo "<li><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
 					echo "<li><a href='".URL."rooms'>Sale</a></li>";
 					echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
-					echo "<li><a href='".URL."tickets'>Baza biletów</a></li></ul></div>";
+					echo "</div>";
 					break;
 				case "worker":
 					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
@@ -55,7 +55,7 @@
 					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 				 	echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
 				 	echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li><li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
-				 	echo "<li><a href='".URL."tickets'>Baza biletów</a></li></ul></div>";
+				 	echo "</div>";
 					break;
 				case "client":
 					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";

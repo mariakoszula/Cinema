@@ -46,7 +46,7 @@ class ManageShowsModel {
 		//@TODO aby nie można było umieścić nie istenijących sensów
 		$movie = $em -> find('Movie', $data['movie']);
 		$runtime = $movie->getRuntime();
-		date_default_timezone_set('Europe/Berlin');
+		date_default_timezone_set('Europe/Warsaw');
 		$interval = DateInterval::createFromDateString($runtime.' minutes');
 		$edate = new DateTime($data['start_time']);
 		$edate->add($interval);

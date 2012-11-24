@@ -1,8 +1,4 @@
 <?php
-//@TODO zrobic selecta z sal 
-//print_r($this->shows);
-//$json = json_encode($this->shows);
-//echo $this->shows['movie'];
 ?>
 <h1>Dodaj seans</h1>
 <form id="show_form1" action="<? echo URL;?>manageShows/save_show" onsubmit="return checkDate()" method="post">

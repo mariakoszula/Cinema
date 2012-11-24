@@ -29,14 +29,13 @@
 		//session_start();
 		//echo $_SESSION['movie'];
 		$data['movie'] = $_POST['movie'];
-		$date = $_POST['date'];
+		$date = $_POST['start_date'];
 		$hour = $_POST['hour'];
 		$data['start_time']=  $date." ".$hour;
 		$data['room'] =  $_POST['sala'];
 		$data['bprice'] = $_POST['bprice'];
-		print_r($_POST);
 		$this->model->save_show($data);
-		$this->view->save_show = $this->model->save_show;
+		//$this->view->save_show = $this->model->save_show($data);
 		//header ('Location: ../manageShows');
 	}
 	
