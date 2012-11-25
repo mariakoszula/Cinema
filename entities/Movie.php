@@ -63,7 +63,7 @@ class Movie {
 		return $this->rating;
 	}
 	public function getCategory(){
-		return $this_->category;
+		return $this->category;
 	}
 }
 ?>
