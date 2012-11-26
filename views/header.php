@@ -65,7 +65,9 @@
 					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
 					break;
 				default:
-					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li></div>";
+					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
+					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
+					echo "</div>";
 					break;
 				}
 				?>

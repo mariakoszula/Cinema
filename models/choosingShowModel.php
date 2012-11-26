@@ -18,6 +18,7 @@ class ChoosingShowModel{
 			->orderby('s.tstart');
 		$query = $qb->getQuery(); 	
 		$array = $query->getArrayResult();
+		$em -> clear();
 		return $array;
 		/*$dql = "SELECT s.tstart from Showing s WHERE s.tstart = '".$now."'";
 		$show = $em -> createQuery($dql);

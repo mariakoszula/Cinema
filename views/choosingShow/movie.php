@@ -15,7 +15,7 @@ echo "<br/><table class='center'>";
 		echo "<td><b>".$res[$i]['title']."</b></td>";
 		echo "<td>".$res[$i]['desc']."</td>";
 		echo "<td>".$res[$i]['runtime']." min</td>";
-		echo "<td><a href='reservation/index/".$res[$i]['id']."'>Wybierz</a></td>";
+			echo "<td><a href='reservation/index/".$res[$i]['id']."'>Wybierz</a></td>";
 		echo "</tr>";	
 	
 	}

@@ -24,7 +24,6 @@ echo "</td><td><select name='discount##".$_SESSION['ticket'][$t]['id']."'>";
 	}
 echo "</select></td></tr>";
 }
-print_r ($_SESSION);
 ?>
 </table>
 <input type="radio" name="type" value="sold"/><label for="1">Kup</label></t>
