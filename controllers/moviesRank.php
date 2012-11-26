@@ -33,7 +33,7 @@
 				$data['rate'] = $_POST['rate'];
 				$data['movie'] = $_POST['movie'];
 				$this->model->save_rate($data);
-				header("location: movie/".$data['movie']."");
+				header("location: movie/".$data['movie']."'");
 			}else header('location: movie');
 			
 		}

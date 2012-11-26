@@ -10,16 +10,6 @@ class MoviesRankModel{
 				'rating order by rating DESC';
 		$query = $em -> createQuery($dql);
 		$results = $query->getResult();
-	/*	$qb = $em->createQueryBuilder();
-		$qb -> select('m.id, m.title, m.rating', $qb->expr()->count('r.id'))
-			-> from('Movie', 'm')
-			-> leftJoin('Rate', 'r', 'WITH', 'm.id = r.movie')
-			-> groupBy('m.id')
-			-> addGroupBy('m.title')
-			-> addGroupBy('m.rating')
-			-> orderBy ('m.rating', DESC);
-		$query = $qb->getQuery();
-		$results = $query->getResult();*/
 		return $results;
 	}
 	
