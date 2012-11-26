@@ -7,11 +7,11 @@
 			$logged = $_SESSION['loggedIn'];
 			$role =  $_SESSION['role'];
 			$user = $_SESSION['user'];
-			if(isset($_SESSION['ticket'])) session_unset ($_SESSION['ticket']);
-			if(isset($_SESSION['show'])) session_unset ($_SESSION['show']);
-			if($logged == false || $role != ('manager' || 'worker' || 'client')){
+			if(isset($_SESSION['ticket'])) unset ($_SESSION['ticket']);
+			if(isset($_SESSION['show'])) unset ($_SESSION['show']);
+			if($logged == false){
 				session_destroy();
-				header('location: ../login');
+				header('location: '.URL.'login');
 				exit;
 			}
 		}
@@ -37,10 +37,9 @@
 			}else header('location: movie');
 			
 		}
-
-		
-		
-
+		public function hours(){
+			$this->view->getView('moviesRank/hours', false);
+		}
 }
 	
 ?>

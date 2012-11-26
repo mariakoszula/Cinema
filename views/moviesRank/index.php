@@ -1,7 +1,6 @@
 <table class="center">
 	<tr><th>Miejsce</th><th>Tytuł</th><th>Ocena</th><th>Ilość głosów</th><th>Na ekranie</th></tr>
 	<?php 
-
 for($i=0; $i<sizeof($this->index); $i++){
 	
 	echo "<tr><td>".($i+1)."</td>";
@@ -12,3 +11,4 @@ for($i=0; $i<sizeof($this->index); $i++){
 }
 ?>
 </table>
+

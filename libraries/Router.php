@@ -3,8 +3,8 @@ class Router{
 	function __construct() {
 		
 		$url = isset($_GET['page_url']) ? $_GET['page_url'] : null;
-		$url = rtrim($url, '/');
-		$url = filter_var($url, FILTER_SANITIZE_URL);
+	/*	$url = rtrim($url, '/');
+		$url = filter_var($url, FILTER_SANITIZE_URL);*/
 		$url = explode('/', $url);
 
 		if (empty($url[0])){
@@ -22,7 +22,6 @@ class Router{
 		}
 		$controller = new $url[0];
 		$controller->loadModel($url[0]);
-		//calling methods
 		if (isset($url[2])){
 			if(method_exists($controller, $url[1])){
 				$controller->{$url[1]}($url[2]);

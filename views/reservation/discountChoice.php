@@ -2,6 +2,8 @@
 
 echo "Wybrane miejsca:<br/>";	
 $bprice =  $_SESSION['show']['bprice'];
+print_r($_SESSION['ticket']);
+
 ?>		
 <div>
 <form name="reservation" action="<?php echo URL; ?>reservation/save" onsubmit="return check()" method="post">

@@ -2,6 +2,7 @@
 class ReservationModel {
 	function __construct() {
 		
+		
 	}
 	public function seatChoice($id){
 		require_once ("bootstrap.php");
@@ -61,7 +62,7 @@ class ReservationModel {
 					throw $e;
 				}	
 			}
-			unset($_SESSION['ticket']);
+			//session_unset($_SESSION['ticket']);
 		}else echo 'ktorys z biletow zajety, tu trzeba zrobic msg i przkierwoać jakos spowortem do strony z siedzeniami z odpowiednim showing id';
 		$em->clear();
 		return $flag;

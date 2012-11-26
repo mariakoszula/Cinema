@@ -1,15 +1,14 @@
 <?php
 echo "Proszę wybrać miejsca";
-		
+		print_r($_SESSION);
 ?>		
 <div id="seats">
 <form action="<?php echo URL?>reservation/discountChoice"  method="post" name="seats">
 <p><strong>Ekran</strong></p>
+
 <hr>
 <table class="center">
 <?php
-
-
 	for($r=1; $r<=20; $r++){
 			echo "<tr><td>$r</td>";
 		for($s=1; $s<=20; $s++){

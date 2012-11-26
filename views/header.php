@@ -7,15 +7,23 @@
 <link rel="Shortcut icon" href="<?php echo URL; ?>public/Images/cin_przesk.png" />
 <link rel="stylesheet" href="<?php echo URL;?>public/Style/default.css" type="text/css"/>
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/jquery.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>views/rooms/js/default.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>views/manageShows/default.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>views/choosingShow/default.js"></script>
-<script type="text/javascript" src="<?php echo URL;?>views/reservation/js/default.js"></script>
-<script src="public/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+<!--<script src="public/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>-->
+<?php 
+$url = $_GET['page_url'];
+$tmp = explode("/", $url);
+$file = "views/".$tmp[0]."/default.js";
+
+if (file_exists($file)){
+echo "<script type='text/javascript' src='".URL.$file."'></script>";
+}
+?>
 </head>
 
 <body>
-<?php session_start();?>
+
+<?php 
+date_default_timezone_set('Europe/Warsaw');
+session_start();?>
 <div id="main">
 <div id="header">
 			<h1>Kino</h1>

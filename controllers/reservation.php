@@ -3,10 +3,12 @@
 		function __construct(){
 			
 			parent ::__construct();
-			session_start();
+					session_start();
 			$logged = $_SESSION['loggedIn'];
 			$role =  $_SESSION['role'];
 			$user = $_SESSION['user'];
+			if(isset($_SESSION['ticket'])) unset ($_SESSION['ticket']);
+			//if(isset($_SESSION['show'])) session_unset ($_SESSION['show']);
 	//		$ticket = $_SESSION['ticket'];
 			/*if(!isset($showig)){
 				session_destroy();
@@ -44,7 +46,6 @@
 	
 	public function save(){
 		//unset($_SESSION['show']);
-		//unset($_SESSION['user']);
 		for($t=0; $t<sizeof($_SESSION['ticket']); $t++){
 		$_SESSION['ticket'][$t]['type']=$_POST['type'];
 		if($_POST != 'type') {
