@@ -1,8 +1,7 @@
  $(document).ready(
                    function(){    
-                	 
+
 			$(".wybor").change(function(){
-				  
 				var wybrana_data=$(this).attr("value");
 				if (wybrana_data!='0'){
 					

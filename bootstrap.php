@@ -11,6 +11,7 @@ require_once "entities/Showing.php";
 require_once "entities/Discount.php";
 require_once "entities/Ticket.php";
 require_once "entities/Category.php";
+require_once "entities/Rate.php";
 
 if (!class_exists("Doctrine\Common\Version", false)) {
     require_once "bootstrap_doctrine.php";

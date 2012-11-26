@@ -29,11 +29,11 @@ echo "</select></td></tr>";
 <input type="radio" name="type" value="sold"/><label for="1">Kup</label></t>
 <input type="radio" name="type" value="reserved"/><label for="2">Zarezerwuj</label></t>
 <?php
-if($_SESSION['role']==('worker' || 'manager')){
-echo "<input type='radio' name='type' value='unavailable'/><label for='3'>Zepsute</label><br/>";
+if($_SESSION['role'] == 'worker' || $_SESSION['role'] == 'manager'){
+echo "<input type='radio' name='type' value='unavailable'/><label for='3'>Zepsute</label>";
 }
 ?>
-<input type="submit" value="Zatwierdź"/>
+<br/><input type="submit" value="Zatwierdź"/>
 </form>
 
 </div>

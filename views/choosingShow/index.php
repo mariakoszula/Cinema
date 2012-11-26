@@ -2,7 +2,7 @@
 	require "public/timeConv.php";
 ?>
 <?php
-
+$rola = $_SESSION['role'];
 echo "<select class='wybor'>";
 		echo "<option value='0'>Wybierz date</option>";
 		for($i=0; $i<=sizeof($this->index)-1; $i++){
