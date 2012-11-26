@@ -1,6 +1,5 @@
 <?php
 echo "Proszę wybrać miejsca";
-		print_r($_SESSION);
 ?>		
 <div id="seats">
 <form action="<?php echo URL?>reservation/discountChoice"  method="post" name="seats">

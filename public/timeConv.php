@@ -1,6 +1,7 @@
 <?php
 function getConvTime($t)
     {
+    	date_default_timezone_set('Europe/Warsaw');
     	$t = new DateTime($t);
         return array(	'y' => $t->format("Y"), 
 						'm' => $t->format("m"), 

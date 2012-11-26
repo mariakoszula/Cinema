@@ -22,6 +22,7 @@ echo "<script type='text/javascript' src='".URL.$file."'></script>";
 <body>
 
 <?php 
+require "public/timeConv.php";
 date_default_timezone_set('Europe/Warsaw');
 session_start();?>
 <div id="main">

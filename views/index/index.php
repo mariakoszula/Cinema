@@ -1,6 +1,4 @@
-<?php
-	require "public/timeConv.php";
-?>
+
 <h1>Dzisiejsze seanse</h1>
 <?php
 
@@ -13,7 +11,6 @@ $a = $this->index[0];
 		$time = getConvTime($this->index[$i]['tstart']);
 		echo "<td>".$this->index[$i]['runtime']." min</td>";
 		echo "<td><a href='reservation/index/".$this->index[$i]['id']."'>".$time['h'].":".$time['i']."</a></td>";
-		unset($this->$time);
 		echo "</tr>";	
 	}
 

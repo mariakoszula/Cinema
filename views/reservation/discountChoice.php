@@ -2,7 +2,6 @@
 
 echo "Wybrane miejsca:<br/>";	
 $bprice =  $_SESSION['show']['bprice'];
-print_r($_SESSION['ticket']);
 
 ?>		
 <div>
