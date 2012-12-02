@@ -71,12 +71,12 @@ class ManageShowsModel {
 		$single = $query->getSingleResult();
 		//@TODO jakoś ładnie wiadomość wyświetlać
 		if($single[1] == 0){
-			 echo "kolizja"; 
+			 echo "Kolizja"; 
 			 $em->remove($show);
 			 $em->flush();
 		}
 		else echo "Dodano seans";
-			
+		//return $msg;
 	}
 	
 	

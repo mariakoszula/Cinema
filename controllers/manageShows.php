@@ -26,16 +26,14 @@
 			$this->view->getView('manageShows/shows');
 	}
 	public function save_show(){
-		//session_start();
-		//echo $_SESSION['movie'];
 		$data['movie'] = $_POST['movie'];
 		$date = $_POST['start_date'];
 		$hour = $_POST['hour'];
 		$data['start_time']=  $date." ".$hour;
 		$data['room'] =  $_POST['sala'];
 		$data['bprice'] = $_POST['bprice'];
-		$this->model->save_show($data);
-		//$this->view->save_show = $this->model->save_show($data);
+		$this->view->save_show = $this->model->save_show($data);
+		//$this->view->getView('manageShows/save_show', false);
 		//header ('Location: ../manageShows');
 	}
 	

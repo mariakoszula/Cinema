@@ -1,6 +1,7 @@
 <?php
 ?>
 <h1>Dodaj seans</h1>
+<div id="msg"></div>
 <form id="show_form1" action="<? echo URL;?>manageShows/save_show" onsubmit="return checkDate()" method="post">
 
 	<label>Dzień: </label><input type="date" name="start_date" required="required"><br/>

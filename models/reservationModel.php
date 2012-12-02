@@ -62,7 +62,7 @@ class ReservationModel {
 					throw $e;
 				}	
 			}
-			//session_unset($_SESSION['ticket']);
+			//unset($_SESSION['ticket']);
 		}else echo 'ktorys z biletow zajety, tu trzeba zrobic msg i przkierwoać jakos spowortem do strony z siedzeniami z odpowiednim showing id';
 		$em->clear();
 		return $flag;

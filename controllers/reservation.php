@@ -7,7 +7,7 @@
 			$logged = $_SESSION['loggedIn'];
 			$role =  $_SESSION['role'];
 			$user = $_SESSION['user'];
-			if(isset($_SESSION['ticket'])) unset ($_SESSION['ticket']);
+			//if(isset($_SESSION['ticket'])) unset ($_SESSION['ticket']);
 			//if(isset($_SESSION['show'])) session_unset ($_SESSION['show']);
 	//		$ticket = $_SESSION['ticket'];
 			/*if(!isset($showig)){

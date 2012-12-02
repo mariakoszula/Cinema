@@ -2,6 +2,7 @@
 <div id="movie_list">
 <h1>Filmy:</h1>
 <form id="movies_form" method="POST" action="<?php echo URL;?>manageShows/shows">
+
 <?php
 echo "<table class='center'>";
 foreach ($this->listOfMovies as $key => $value){
