@@ -48,34 +48,82 @@ session_start();?>
 					<?php
 					switch($_SESSION['role']){
 				case "manager": 
-					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
-					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
-					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
-					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
-					echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li>" .
-							"<li class='right_menu'><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
-					echo "<li><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
-					echo "<li><a href='".URL."rooms'>Sale</a></li>";
-					echo "<li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+					echo "<div id='top_menu'><ul><li ";
+						if($tmp[0] == 'index') echo "class='current_page'";
+					echo "><a href='".URL."index'>Strona Główna</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'choosingShow') echo "class='current_page'";
+					echo"><a href='".URL."choosingShow' >Wybierz seans</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'moviesRank') echo "class='current_page'";
+					echo "><a href='".URL."moviesRank'>Ranking filmów</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'usersAction') echo "class='current_page'";
+					echo "><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
+					
+					echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li>";
+					
+					echo "<li ";
+						if($tmp[0] == 'manager' && $tmp[1] == 'listOfUsers') echo "class='current_page'";
+					echo "><a href='".URL."manager/listOfUsers'>Baza użytkowników</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'manager' && $tmp[1] =='') echo "class='current_page'";
+					echo "><a href='".URL."manager'>Dodawanie użytkowników</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'rooms') echo "class='current_page'";
+					echo "><a href='".URL."rooms'>Sale</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'manageShows') echo "class='current_page'";
+					echo "><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'tickets') echo "class='current_page'";
+					echo "><a href='".URL."tickets'>Bilety</a></li>";
 					echo "</div>";
 					break;
 				case "worker":
-					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
-					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
-					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
-				 	echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
-				 	echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li><li><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+					echo "<div id='top_menu'><ul><li ";
+						if($tmp[0] == 'index') echo "class='current_page'";
+					echo "><a href='".URL."index'>Strona Główna</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'choosingShow') echo "class='current_page'";
+					echo"><a href='".URL."choosingShow' >Wybierz seans</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'moviesRank') echo "class='current_page'";
+					echo "><a href='".URL."moviesRank'>Ranking filmów</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'usersAction') echo "class='current_page'";
+					echo "><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
+				 	
+				 	echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li>";
+					echo "<li ";
+						if($tmp[0] == 'manageShows') echo "class='current_page'";
+					echo "><a href='".URL."manageShows'>Zarządzenie repertuarem</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'tickets') echo "class='current_page'";
+					echo "><a href='".URL."tickets'>Bilety</a></li>";
 				 	echo "</div>";
 					break;
 				case "client":
-					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
-					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
-					echo "<li><a href='".URL."moviesRank'>Ranking filmów</a></li>";
-					echo "<li><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
+					echo "<div id='top_menu'><ul><li ";
+						if($tmp[0] == 'index') echo "class='current_page'";
+					echo "><a href='".URL."index'>Strona Główna</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'choosingShow') echo "class='current_page'";
+					echo"><a href='".URL."choosingShow' >Wybierz seans</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'moviesRank') echo "class='current_page'";
+					echo "><a href='".URL."moviesRank'>Ranking filmów</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'usersAction') echo "class='current_page'";
+					echo "><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
 					break;
 				default:
-					echo "<div id='top_menu'><ul><li class='current_page'><a href='".URL."index'>Strona Główna</a></li>";
-					echo "<li><a href='".URL."choosingShow'>Wybierz seans</a></li>";
+					echo "<div id='top_menu'><ul><li ";
+						if($tmp[0] == 'index') echo "class='current_page'";
+						echo "><a href='".URL."index'>Strona Główna</a></li>";
+					echo "<li ";
+						if($tmp[0] == 'choosingShow') echo "class='current_page'";
+					echo"><a href='".URL."choosingShow' >Wybierz seans</a></li>";
 					echo "</div>";
 					break;
 				}
@@ -84,3 +132,6 @@ session_start();?>
 
 
 <div id="content">
+<?php
+
+echo $tmp[0];
