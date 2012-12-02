@@ -27,6 +27,10 @@ for($i=sizeof($this->index)-1; $i>=0; $i--){
 		elseif($this->index[$i]['state'] == 'sold'){
 			echo "<td>kupiony</td>";
 		}
+		elseif($this->index[$i]['state'] == 'unavailable'){
+			echo "<td>zepsute</td>";
+			echo "<td><a href=".URL."usersAction/cancel/".$this->index[$i]['id'].">Naprawione</a></td>";
+		}
 		echo "</tr>";
 	}
 	elseif($date < $now &&  $this->index[$i]['state'] == 'sold'){
