@@ -132,6 +132,3 @@ session_start();?>
 
 
 <div id="content">
-<?php
-
-echo $tmp[0];

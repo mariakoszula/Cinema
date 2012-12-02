@@ -13,7 +13,7 @@ img{
 	position:absolute;
 	left:150px;
 	top:70px;
-z-index:-1;
+	z-index:-1;
 }
 #main{
 	text-align: center;
@@ -21,16 +21,34 @@ z-index:-1;
 	width: 100%;
 	margin:auto;
 }
-#main h1, h2, h3, h4, h5 {
-	margin: 10;
-	margin: 0px;
+#main h1 {
+	margin: 1px;
     padding: 5px;
     font-family: 'Arvno', serif;
-	font-size: 100%;
+	font-size: 30px;
+    font-weight: 400;
+    color: #198a40;
+    text-shadow:
+		0px -1px 1px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+#main h2 {
+	margin: 1px;
+    padding: 5px;
+    font-family: 'Arvno', serif;
+	font-size: 25px;
     font-weight: 400;
     color: black;
 }
-
+#main h3 {
+	margin: 1px;
+    padding: 5px;
+    font-family: 'Arvno', serif;
+	font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
 #header {
 	width: 900px;
 	height: 60px;
@@ -191,6 +209,13 @@ table.center{
 	margin-right:auto;
 	
 }
+table.top{
+	padding: 0px;
+	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
 button.seats_disabled{
 	width: 20px;
 	height: 20px;
@@ -220,7 +245,7 @@ button#add_show{
 	border-radius: 5px;
 }
 table.left{
-	text-align: left;
+	text-align: center;
 	margin-left: 10px;
 	margin-right:auto;
 }
@@ -228,11 +253,69 @@ table.right{
 	margin-right: 10px;
 	margin-left: auto;
 }
-button.choice{
-	background-color: green;
+button.available{
+	margin: 1px;
+	height: 25px;
+	width: 25px;
+	background: rgb(0, 128, 0);
+	border-radius: 6px;
+	border: 1px solid #000000;
+	cursor: cursor;
+	cursor: pointer;
 }
 button.occupied{
-	background-color: red;
+	margin: 1px;
+	height: 25px;
+	width: 25px;
+	background: #d72a18;
+	border-radius: 6px;
+	border: 1px solid #000000;
+}
+button.choice{
+	margin: 1px;
+	height: 25px;
+	width: 25px;
+	background: rgb(250, 195, 30);
+	border-radius: 6px;
+	border: 1px solid #000000;
+}
+button.next{
+	font-weight: bold;
+	font-size: 19px;
+	color: #ffffff;
+	padding: 7px 18px;
+	background: -moz-linear-gradient(
+		top,
+		#a3a3a3 0%,
+		#3b3b3b 50%,
+		#242424 50%,
+		#000000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#a3a3a3),
+		color-stop(0.50, #3b3b3b),
+		color-stop(0.50, #242424),
+		to(#000000));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	cursor: pointer;
+}
+button.next:hover{
+	background: -moz-linear-gradient(
+		top,
+		#000000 0%,
+		#242424 50%,
+		#3b3b3b 50%,
+		#a3a3a3);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#000000),
+		color-stop(0.50, #242424),
+		color-stop(0.50, #3b3b3b),
+		to(#a3a3a3));
+	color: red;
 }
 
 #footer{
