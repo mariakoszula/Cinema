@@ -5,23 +5,17 @@ body {
 	background: url('../Images/tail-top.gif') repeat-x left top #1d1d1d;
 	color: black;
 	min-width: 800px;
+	font-size: 18px;
 }
 
 ul {line-style: none;}
 li{display:inline;}
-a{	background-color: transparent; text-align: center; text-decoration: none; color: green};
-a:hover{
-	padding: 15px;
-	border-radius: 5px;
-	background: #E8E8E8 ;
-	text-decoration: none;
-	color: #d72a18;
-}
+.center a{background-color: transparent; text-align: center; text-decoration: underline; color: green};
+a:hover {color:#FF00FF;}
 img{
 	position:absolute;
 	left:150px;
 	top:70px;
-	z-index:-1;
 }
 #main{
 	text-align: center;
@@ -53,7 +47,7 @@ img{
 	margin: 1px;
     padding: 5px;
     font-family: 'Arvno', serif;
-	font-size: 25px;
+	font-size: 20px;
     font-weight: 400;
     color: black;
 }
@@ -254,6 +248,7 @@ table.center{
 	margin-right:auto;
 	
 }
+
 table.top{
 	padding: 0px;
 	margin: 0;
@@ -263,7 +258,8 @@ table.top{
 }
 table.left{
 	text-align: center;
-	margin-left: 10px;
+	padding: 10px;
+	margin-left: 60px;
 	margin-right:auto;
 }
 table.right{
@@ -349,7 +345,45 @@ button.next:hover{
 		to(#a3a3a3));
 	color: red;
 }
-
+button.next_small{
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 3px 8px;
+	background: -moz-linear-gradient(
+		top,
+		#a3a3a3 0%,
+		#3b3b3b 50%,
+		#242424 50%,
+		#000000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#a3a3a3),
+		color-stop(0.50, #3b3b3b),
+		color-stop(0.50, #242424),
+		to(#000000));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	cursor: pointer;
+}
+button.next_small:hover{
+	background: -moz-linear-gradient(
+		top,
+		#000000 0%,
+		#242424 50%,
+		#3b3b3b 50%,
+		#a3a3a3);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#000000),
+		color-stop(0.50, #242424),
+		color-stop(0.50, #3b3b3b),
+		to(#a3a3a3));
+	color: green;
+}
 #footer{
 	padding-top: 10px;
 	width: 900px;
@@ -361,4 +395,6 @@ button.next:hover{
 	text-align: center;
 }
 
-
+div#hours{
+	display: inline;
+}

@@ -59,7 +59,7 @@ session_start();?>
 					echo "><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 					echo "<li ";
 						if($tmp[0] == 'usersAction') echo "class='current_page'";
-					echo "><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
+					echo "><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
 					
 					echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li>";
 					
@@ -78,7 +78,7 @@ session_start();?>
 					echo "<li ";
 						if($tmp[0] == 'tickets') echo "class='current_page'";
 					echo "><a href='".URL."tickets'>Bilety</a></li>";
-					echo "</div>";
+					echo "</ul></div>";
 					break;
 				case "worker":
 					echo "<div id='top_menu'><ul><li ";
@@ -92,7 +92,7 @@ session_start();?>
 					echo "><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 					echo "<li ";
 						if($tmp[0] == 'usersAction') echo "class='current_page'";
-					echo "><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
+					echo "><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
 				 	
 				 	echo "<div id='left_menu'><ul><li><p>PANEL ADMINISTRACYJNY</p></li>";
 					echo "<li ";
@@ -101,7 +101,7 @@ session_start();?>
 					echo "<li ";
 						if($tmp[0] == 'tickets') echo "class='current_page'";
 					echo "><a href='".URL."tickets'>Bilety</a></li>";
-				 	echo "</div>";
+				 	echo "</ul></div>";
 					break;
 				case "client":
 					echo "<div id='top_menu'><ul><li ";
@@ -115,7 +115,7 @@ session_start();?>
 					echo "><a href='".URL."moviesRank'>Ranking filmów</a></li>";
 					echo "<li ";
 						if($tmp[0] == 'usersAction') echo "class='current_page'";
-					echo "><a href='".URL."usersAction/index'>Moje konto</a></li><br/></ul></div>";
+					echo "><a href='".URL."usersAction/index'>Moje konto</a></li></ul></div>";
 					break;
 				default:
 					echo "<div id='top_menu'><ul><li ";
