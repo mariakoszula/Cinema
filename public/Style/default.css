@@ -9,6 +9,14 @@ body {
 
 ul {line-style: none;}
 li{display:inline;}
+a{	background-color: transparent; text-align: center; text-decoration: none; color: green};
+a:hover{
+	padding: 15px;
+	border-radius: 5px;
+	background: #E8E8E8 ;
+	text-decoration: none;
+	color: #d72a18;
+}
 img{
 	position:absolute;
 	left:150px;
@@ -46,6 +54,14 @@ img{
     padding: 5px;
     font-family: 'Arvno', serif;
 	font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+#main h4 {
+	margin: 1px;
+    padding: 5px;
+    font-family: 'Arvno', serif;
+	font-size: 20px;
     font-weight: 400;
     color: black;
 }
@@ -197,24 +213,11 @@ img{
 	color: black;
 	float: center; 
 }
+
 #seats{
 	text-size: 10px;
 	margin: auto;
 	width: 80%;
-}
-table.center{
-	padding: 0px;
-	margin: 0;
-	margin-left:auto;
-	margin-right:auto;
-	
-}
-table.top{
-	padding: 0px;
-	margin: 0;
-	margin-left:auto;
-	margin-right:auto;
-	
 }
 button.seats_disabled{
 	width: 20px;
@@ -244,6 +247,20 @@ button#add_show{
 	border: black;
 	border-radius: 5px;
 }
+table.center{
+	padding: 0px;
+	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+table.top{
+	padding: 0px;
+	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
 table.left{
 	text-align: center;
 	margin-left: 10px;
@@ -252,6 +269,20 @@ table.left{
 table.right{
 	margin-right: 10px;
 	margin-left: auto;
+}
+table.center_two_colors{
+	font-size: 20px;
+	padding: 15px;
+	border: solid 7px black;
+	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
+}
+.center_two_colors th{
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-family: 'Arvno', serif;
+	font-size: 20px;
 }
 button.available{
 	margin: 1px;
@@ -280,6 +311,7 @@ button.choice{
 	border: 1px solid #000000;
 }
 button.next{
+	text-align: center;
 	font-weight: bold;
 	font-size: 19px;
 	color: #ffffff;
