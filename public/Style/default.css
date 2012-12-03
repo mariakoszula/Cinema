@@ -263,7 +263,8 @@ table.left{
 	margin-right:auto;
 }
 table.right{
-	margin-right: 10px;
+	border: solid 7px black;
+	margin-right: 60px;
 	margin-left: auto;
 }
 table.center_two_colors{

@@ -20,7 +20,7 @@ function checkDate(){
 $(document).ready(
         function(){    
         	
-		$.get("category.php", function(data){
+		$.get("views/manageShows/category.php", function(data){
 			$(".cat").html(data); 
 		});   
 		/*$.get("save_show.php", function(data){
