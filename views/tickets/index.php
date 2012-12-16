@@ -14,3 +14,4 @@ echo "<select name='show'>";
 	echo "<button type='submit' class='next'>Szukaj</button>";
 ?>
 </form>
+<a href='<?php echo URL;?>tickets/ticketAv'>Ustaw dostępne</a>

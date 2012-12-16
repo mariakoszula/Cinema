@@ -67,5 +67,37 @@ class TicketsModel{
 		$em->flush();
 		$em->clear();
 	}
+	public function ticketAv(){
+		require "bootstrap.php";
+ 		date_default_timezone_set('Europe/Warsaw');
+		$now = new DateTime("now");
+		$now = $now->format('Y-m-d H:i:s');
+		
+		$until = new DateTime();
+		$interval = DateInterval::createFromDateString('10 minutes');
+		$until->add($interval);
+		$until = $until->format('Y-m-d H:i:s');
+			
+		$qb = $em->createQueryBuilder();
+		$qb	->select('t.id, t.type')
+			->from('Ticket', 't')
+			->innerJoin('Showing', 's', 'WITH', 's.id = t.showing')
+			->andwhere($qb->expr()->between('s.tstart', '?1', '?2'), 't.type = ?3')
+			->setParameters(array(
+				1 => $now,
+				2 => $until,
+				3 => 'reserved'
+				));
+		$query = $qb->getQuery(); 	
+		$array = $query->getArrayResult();
+		for($i=0; $i<sizeof($array); $i++){
+			$ticket[$i] = $em->find('Ticket', $array[$i]['id']);
+			$ticket[$i]->setTypes('available');
+			$em->persist($ticket[$i]);
+			$em->flush();
+			$em->clear;
+		}
+		print_r($array);
+	}
 }
 ?>

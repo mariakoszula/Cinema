@@ -38,5 +38,9 @@ class Tickets extends Controller{
 		$this->model->sold($id);
 		header('location: '.URL.'tickets/treserved');
 	}
+	
+	function ticketAv(){
+		$this->model->ticketAv();
+	}
 }
 ?>

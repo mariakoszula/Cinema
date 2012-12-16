@@ -6,7 +6,7 @@ class IndexModel{
 	
 	public function index(){
  		require "bootstrap.php";
- 		date_default_timezone_set('Europe/Berlin');
+ 		date_default_timezone_set('Europe/Warsaw');
 		$now = new DateTime("now");
 		$now = $now->format('Y-m-d H:i:s');
 		
