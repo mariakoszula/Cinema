@@ -34,7 +34,7 @@
 		$data['bprice'] = $_POST['bprice'];
 		$this->view->save_show = $this->model->save_show($data);
 		//$this->view->getView('manageShows/save_show', false);
-		//header ('Location: ../manageShows');
+		header ('Location: ../index');
 	}
 	
 	public function add_movie(){
