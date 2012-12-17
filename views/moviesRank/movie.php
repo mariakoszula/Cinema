@@ -3,6 +3,7 @@ $title = $this->movie['title'];
 $desc = $this->movie['desc'];		
 $time = $this->movie['time'];
 $movie = $this->movie['mid'];
+$ison = $this->movie['ison'];
 $user = $_SESSION['user'];
 $rate = $this->movie['rated'];
 echo "<input type='hidden' id='mid' value='".$movie."'/>";
@@ -25,7 +26,7 @@ echo "</table></form>";
 if(!empty($rate)){
 	echo "<tr><td><label>Twoja ocena: </label>".$rate[0]['rate']."</td></tr></table>";
 }
-
+if($ison ==1 ){
 ?>
 <table class="center">
 <tr><td>&nbsp</td></tr>
@@ -41,3 +42,4 @@ if(!empty($rate)){
 echo $_get['day']."</td></tr>";
 ?>
 </table>
+<?php } ?>

@@ -6,7 +6,7 @@ class MoviesRankModel{
 	
 	public function index(){
 		require_once "bootstrap.php";
-		$dql = 'SELECT m.id, m.title, coalesce(m.rating, 0) AS rating, count(r.id) AS votes FROM Movie m LEFT JOIN Rate r WITH m.id = r.movie group BY m.id, m.title, ' .
+		$dql = 'SELECT m.id, m.is_on_screan, m.title, coalesce(m.rating, 0) AS rating, count(r.id) AS votes FROM Movie m LEFT JOIN Rate r WITH m.id = r.movie group BY m.id, m.title, m.is_on_screan, ' .
 				'rating order by rating DESC';
 		$query = $em -> createQuery($dql);
 		$results = $query->getResult();
@@ -15,24 +15,20 @@ class MoviesRankModel{
 		$now = new DateTime("now");
 		$now = $now->format('Y-m-d H:i:s');
 			
-		$qb = $em->createQueryBuilder();
-		$qb	->select('m.id, count(s.id) AS times')
-			->from('Movie', 'm')
-			->innerJoin('Showing', 's', 'WITH', 's.movie = m.id')
-			->groupby('m.id, s.tstart')
-			->having($qb->expr()->gte('s.tstart', '?1'))
-			->setParameter(1, $now);
-		$query_is = $qb->getQuery(); 	
-		$array = $query_is->getArrayResult();
+		$mdql = 'SELECT m.id, (SELECT count(s.id) from Showing s WHERE s.movie=m.id AND s.tstart >= ?1) AS times from Movie m';
+		$mquery = $em->createQuery($mdql);
+		$mquery->setParameter(1, $now);
+		$array = $mquery -> getResult();
 		for($i=0; $i<sizeof($array); $i++){
 			$movie[$i] = $em->find('Movie', $array[$i]['id']);
-			$movie[$i]->setIsOnScrean('true');
+			if($array[$i]['times'] == 0) $movie[$i]->setIsOnScrean('false');
+			else $movie[$i]->setIsOnScrean('true');
 			$em->persist($movie[$i]);
 			$em->flush();
 			$em->clear;
 		}
-		print_r($array);
-		//return $results;
+		
+		return $results;
 	}
 	
 	public function movie($id){
@@ -42,6 +38,7 @@ class MoviesRankModel{
 		$title = $movie->getTitle();
 		$time = $movie->getRuntime();
 		$desc = $movie->getDesc();
+		$ison = $movie->getIsOnScrean();
 
 		$user = $_SESSION['user'];
 		
@@ -58,7 +55,8 @@ class MoviesRankModel{
 				'time' => $time,
 				'mid' => $mid,
 				'desc' => $desc,
-				'rated' => $single
+				'rated' => $single,
+				'ison' => $ison
 		);
 		$em->clear();
 		return $data;

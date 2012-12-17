@@ -18,7 +18,7 @@
 		
 		public function index(){
 			$this->view->index = $this->model->index();
-			//$this->view->getView('moviesRank/index');
+			$this->view->getView('moviesRank/index');
 			
 		}
 		

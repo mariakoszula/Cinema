@@ -7,6 +7,9 @@ for($i=0; $i<sizeof($this->index); $i++){
 	echo "<td><a href='".URL."moviesRank/movie/".$this->index[$i]['id']."'>".$this->index[$i]['title']."</a></td>";
 	echo "<td>".$this->index[$i]['rating']."</td>";
 	echo "<td>".$this->index[$i]['votes']."</td>";
+	echo "<td>";
+		if($this->index[$i]['is_on_screan'] == 1) echo "tak";
+	echo "</td>";
 	echo "</tr>";
 }
 ?>
