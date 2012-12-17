@@ -1,5 +1,5 @@
 
-<form id="users_form" method="POST" action="<?php echo URL;?>register/create">
+<form id="users_form" method="POST" onsubmit="return nameValid()" action="<?php echo URL;?>register/create">
 	<label>Imię: </label><input type="text" name="name" required="required"/><br/>
 	<label>Nazwisko: </label><input type="text" name="last_name" required="required"/><br/>
 	<label>Nr telefonu: </label><input type="text" name="phone" required="required"/><br/>

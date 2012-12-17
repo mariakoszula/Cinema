@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<?php echo URL;?>public/Style/default.css" type="text/css"/>
 <script type="text/javascript" src="<?php echo URL;?>public/Scripts/jquery.js"></script>
 <!--<script src="public/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>-->
+<script src="public/Scripts/validation.js" type="text/javascript"></script>
 <?php 
 $url = $_GET['page_url'];
 $tmp = explode("/", $url);
