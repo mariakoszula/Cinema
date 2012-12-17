@@ -65,5 +65,8 @@ class Movie {
 	public function getCategory(){
 		return $this->category;
 	}
+	public function setIsOnScrean($is_on_screan) {
+		$this->is_on_screan = $is_on_screan;
+	}
 }
 ?>

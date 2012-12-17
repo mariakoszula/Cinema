@@ -10,7 +10,29 @@ class MoviesRankModel{
 				'rating order by rating DESC';
 		$query = $em -> createQuery($dql);
 		$results = $query->getResult();
-		return $results;
+		
+ 		date_default_timezone_set('Europe/Warsaw');
+		$now = new DateTime("now");
+		$now = $now->format('Y-m-d H:i:s');
+			
+		$qb = $em->createQueryBuilder();
+		$qb	->select('m.id, count(s.id) AS times')
+			->from('Movie', 'm')
+			->innerJoin('Showing', 's', 'WITH', 's.movie = m.id')
+			->groupby('m.id, s.tstart')
+			->having($qb->expr()->gte('s.tstart', '?1'))
+			->setParameter(1, $now);
+		$query_is = $qb->getQuery(); 	
+		$array = $query_is->getArrayResult();
+		for($i=0; $i<sizeof($array); $i++){
+			$movie[$i] = $em->find('Movie', $array[$i]['id']);
+			$movie[$i]->setIsOnScrean('true');
+			$em->persist($movie[$i]);
+			$em->flush();
+			$em->clear;
+		}
+		print_r($array);
+		//return $results;
 	}
 	
 	public function movie($id){

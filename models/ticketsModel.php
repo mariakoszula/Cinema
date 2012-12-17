@@ -97,7 +97,6 @@ class TicketsModel{
 			$em->flush();
 			$em->clear;
 		}
-		print_r($array);
 	}
 }
 ?>
