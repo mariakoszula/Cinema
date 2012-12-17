@@ -32,7 +32,8 @@ class ManagerModel {
 				'id' => $result->getId(),
 				'name' => $result->getName(),
 				'lastname' => $result->getLastName(),
-				'login' => $result->getLogin()
+				'login' => $result->getLogin(),
+				'role' => $result->getRole()
 			);
 		}
 		return $data;

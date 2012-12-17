@@ -44,7 +44,7 @@
                	$data['password']=md5($_POST['password']);
 			
 			$this->model->create($data);
-			header('location:'.URL.'manager/index');
+			header('location:'.URL.'manager/listOfUsers');
 		}
 		
 	public function delete($id){
