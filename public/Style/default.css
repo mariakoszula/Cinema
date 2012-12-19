@@ -14,6 +14,11 @@ body {
 	min-width: 800px;
 	font-size: 18px;
 }
+img{
+	float: left;
+	position: relative;
+	padding: 10px;
+}
 
 li{display:inline;}
 
@@ -27,6 +32,18 @@ a{background-color: transparent; text-align: center; text-decoration: underline;
 }
 #main h1 {
 	text-align: center;
+	margin: 1px;
+    padding: 5px;
+    font-family: 'Arvno', serif;
+	font-size: 30px;
+    font-weight: 400;
+    color: #198a40;
+    text-shadow:
+		0px -1px 1px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+#main h5 {
+	text-align: left;
 	margin: 1px;
     padding: 5px;
     font-family: 'Arvno', serif;
@@ -55,12 +72,16 @@ a{background-color: transparent; text-align: center; text-decoration: underline;
     color: black;
 }
 #main h4 {
+	text-align: left;
 	margin: 1px;
     padding: 5px;
     font-family: 'Arvno', serif;
-	font-size: 20px;
+	font-size: 30px;
     font-weight: 400;
-    color: black;
+    color: #198a40;
+    text-shadow:
+		0px -1px 1px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
 }
 #header {
 	width: 900px;
@@ -224,8 +245,7 @@ select.wybor{
   background-position: center right;
   background-repeat: no-repeat;
   border: 1px solid #AAA;
-  float: center;
-  text-align: center;
+  margin: auto;
   color: #555;
   font-size: 25px;
   overflow: hidden;
@@ -236,6 +256,26 @@ select.wybor{
 select.wybor:focus {
     outline: 0 none !important;
 }
+select.wybor_small{
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url('../Images/arrow.png'), 
+   -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  margin: auto;
+  color: #555;
+  font-size: 15px;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 150px;
+  }
 
 #seats{
 	text-size: 10px;
@@ -262,10 +302,9 @@ button#add_show{
 	float: right;
 	font-size: 20px;
 }
-#movie_list{
+.right{
 	margin-left: 20px;
 	float: left;
-	padding: 10px;
 }
 #add_movie{
 	margin-right: 20px;
@@ -310,10 +349,8 @@ table.top{
 	
 }
 table.left{
-	text-align: center;
 	padding: 10px;
-	margin-left: 60px;
-	margin-right:auto;
+	float: center;
 }
 .left td{
 	padding: 0px 1px 10px 1px;
@@ -805,6 +842,9 @@ div#hours{
     border: 3px solid black;
     background: white;
 }
+select.form{
+	   width: 260px;
+}
 .form-two{
     margin: auto 50px auto auto;
     padding: 15px;
@@ -885,11 +925,23 @@ div#hours{
 	border-radius: 5px;
 	border: 1px solid black;	
 }
-input[type="radio"]{
+.form-two input[type="radio"]{
 	width: 20px;
 	heigth: 20px;
 	padding: 0 5px 0 0px;
 	clear: left;
-	float: left; 
-	text-align: left;
+	float: center; 
+	text-align: center;
 }
+#center.form-two{
+	margin: auto;
+}
+
+#show-form1.form-two{
+	margin: auto;
+}
+#left.form{
+	float: left;
+	text-align: center;
+}
+

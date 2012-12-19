@@ -43,6 +43,7 @@ class UsersActionModel {
 		$data['email'] = $user->getEmail();
 		$data['login'] = $user->getLogin();
 		$data['role'] = $user->getRole();
+		$data['pass'] = $user->getPassword();
 		$em->clear;
 		return ($data);
 	}

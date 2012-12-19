@@ -19,7 +19,7 @@ for($t=0; $t<sizeof($_SESSION['ticket']); $t++){
 echo "<tr><td class='t1'>".$_SESSION['ticket'][$t]['row_no'];
 echo "</td><td class='t1'>".$_SESSION['ticket'][$t]['seat_no'];
 
-echo "</td><td class='t1'><div class='select_style'><select name='discount##".$_SESSION['ticket'][$t]['id']."'>";
+echo "</td><td class='t1'><div class='select_style'><select class='wybor_small' name='discount##".$_SESSION['ticket'][$t]['id']."'>";
 	for($i=0; $i<sizeof($this->discountChoice); $i++){
 		$frac = $this->discountChoice[$i]['fraction'];
 		$price = $frac*$bprice;

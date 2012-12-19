@@ -1,5 +1,5 @@
 function checkDate(){
-	
+
 	var today = new Date();
 	var date = new Date();
 	var start_date = document.forms["show_form1"]["start_date"].value;
@@ -13,7 +13,7 @@ function checkDate(){
 		return false;
 	}else{
 		return true;
-		
+
 	}
 }
 

@@ -1,5 +1,5 @@
 
-<div id="movie_list">
+<div class="right">
 <form class="form-two" method="POST" action="<?php echo URL;?>manageShows/shows">
 <h1>Filmy:</h1>
 <hr>

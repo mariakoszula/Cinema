@@ -93,6 +93,10 @@ class TicketsModel{
 		for($i=0; $i<sizeof($array); $i++){
 			$ticket[$i] = $em->find('Ticket', $array[$i]['id']);
 			$ticket[$i]->setTypes('available');
+			$discount = $em->find('Discount', 1);
+			$user = $em->find('Users', 0);
+			$ticket[$i]->setUser($user);
+			$ticket[$i]->setDiscount($discount);
 			$em->persist($ticket[$i]);
 			$em->flush();
 			$em->clear;

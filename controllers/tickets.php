@@ -41,6 +41,7 @@ class Tickets extends Controller{
 	
 	function ticketAv(){
 		$this->model->ticketAv();
+		header('location: '.URL.'tickets/index');
 	}
 }
 ?>
