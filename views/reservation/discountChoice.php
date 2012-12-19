@@ -43,9 +43,10 @@ echo "<td><h4><input type='radio' name='type' value='unavailable'/><label for='3
 echo "</tr>";
 ?>
 <tr><td>&nbsp;</td></tr>
-<tr><td><button class="next"><a href="#" onclick="history.go(-1);return false;">Powrót</button></td><td>&nbsp</td><td><button type="submit" onclick="return check()" class="next">Zatwierdź</button></td></tr>
+<tr><td>&nbsp</td><td>&nbsp</td><td><button type="submit" onclick="return check()" class="next">Zatwierdź</button></td></tr>
 </table>
 </form>
-
-
+<!--
+<button class="next"><a href="#" onclick="history.go(-1);return false;">Powrót</button></td><td>
+-->
 

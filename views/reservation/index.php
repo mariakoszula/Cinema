@@ -6,7 +6,7 @@
 <div id="seats">
 <form action="<?php echo URL?>reservation/discountChoice"  method="post" name="seats">
 
-<table class="center">
+<table class="room-table">
 <tr><td colspan="21">&nbsp</td></tr>
 <tr><td colspan="21"><strong>EKRAN</strong></td></tr>
 <tr><td colspan="21"><hr></td></tr>
@@ -31,7 +31,7 @@
 
 ?>
 <tr><td colspan="21">&nbsp</td></tr>
-<tr><td colspan="21"><button class="next" type="submit">Dalej</button><td/></tr>
+<tr><td colspan="21"><button class="next" type="submit"><i class='icon-circle-arrow-right icon-large'></i> Dalej</button><td/></tr>
 </table>
 </form>
 </div>
