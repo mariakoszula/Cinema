@@ -1,8 +1,8 @@
 
 <div id="movie_list">
+<form class="form-two" method="POST" action="<?php echo URL;?>manageShows/shows">
 <h1>Filmy:</h1>
-<form method="POST" action="<?php echo URL;?>manageShows/shows">
-
+<hr>
 <?php
 echo "<table class='left'>";
 foreach ($this->listOfMovies as $key => $value){
@@ -13,22 +13,19 @@ foreach ($this->listOfMovies as $key => $value){
 		}
 echo "</table>";
 ?>
-<input type="submit" value="Dodaj seans na wybrany film"/>
+<button type="submit" class='next'><i class="icon-plus-sign icon-large"></i> Dodaj seans</button>
 </form>
 </div>
-<div >
-<table class='right'>
-<tr><td colspan="2"><h1>Dodaj film</h1></td></tr>
-<tr><td colspan="2">&nbsp</td></tr>
-<form method="POST" action="<?php echo URL;?>manageShows/add_movie">
-	<tr><td><label>Tytuł: </label></td><td><input type="text" name="title" required="required"/></td></tr>
-	<tr><td><label>Opis: </label></td><td><textarea rows="10" cols="20" name="description"></textarea></td></tr>
-	<tr><td><label>Czas trwania [min]: </label></td><td><input type="text" name="time" required="required"/></td></tr>
-	<tr><td><label>Categoria</label></td><td><select class="cat" name="category"></select></td></tr>
-	<tr><td colspan="2"><input id="add_show" type="submit" value="Dodaj" name="submit"/></td></tr>
+<form class="form-two" method="POST" action="<?php echo URL;?>manageShows/add_movie">
+	<fieldset>
+	<h1>Dodaj film</h1>
+	<label>Tytuł: </label><input type="text" name="title" required="required"/><br/><br/>
+	<label>Opis: </label><textarea rows="10" cols="20" name="description"></textarea><br/><br/><br/><br/>
+	</br><label>Czas trwania [min]: </label><input type="text" name="time" required="required"/><br/><br/>
+	<label>Categoria:</label><select class="cat" name="category"></select>
+	</br></br><button type="submit" class='next'><i class="icon-plus-sign icon-large"></i> Dodaj</button>
+	</fieldset>
 </form>	
-</td>
-</tr>
-</table>
-</div>
+
+
 

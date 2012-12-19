@@ -19,7 +19,6 @@ li{display:inline;}
 
 a{background-color: transparent; text-align: center; text-decoration: underline; color: green};
 
-
 #main{
 	text-align: center;
 	float: center;
@@ -213,7 +212,30 @@ a{background-color: transparent; text-align: center; text-decoration: underline;
 	text-decoration: none;
 	color: #d72a18;
 }
-
+select.wybor{
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url('../Images/arrow.png'), 
+   -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  float: center;
+  text-align: center;
+  color: #555;
+  font-size: 25px;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 300px;
+  }
+select.wybor:focus {
+    outline: 0 none !important;
+}
 
 #seats{
 	text-size: 10px;
@@ -221,13 +243,15 @@ a{background-color: transparent; text-align: center; text-decoration: underline;
 	width: 80%;
 }
 button.seats_disabled{
-	width: 30px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	background-color: transparent;
+	border: transparent;
+	cursor: default;
 }
 button.seats_is{
-	width: 30px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	cursor: pointer;
 }
 button.next{
@@ -290,6 +314,9 @@ table.left{
 	padding: 10px;
 	margin-left: 60px;
 	margin-right:auto;
+}
+.left td{
+	padding: 0px 1px 10px 1px;
 }
 table.right{
 	border: solid 7px black;
@@ -777,4 +804,92 @@ div#hours{
     border-radius: 10px;
     border: 3px solid black;
     background: white;
+}
+.form-two{
+    margin: auto 50px auto auto;
+    padding: 15px;
+    box-shadow: 
+        0 0 1px rgba(0, 0, 0, 0.3), 
+        0 3px 7px rgba(0, 0, 0, 0.3), 
+        inset 0 1px rgba(255,255,255,1),
+        inset 0 -3px 2px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    border: 3px solid black;
+    background: white;
+    overflow: hidden;
+    width: 320px;
+}
+
+.form-two input:focus, 
+.form-two button:focus, 
+.form-two select:focus, 
+.form-two textarea:focus {
+    outline: 0 none !important;
+}
+
+.form-two input,
+.form-two select, 
+.form-two textarea {
+    border: 1px solid #ccc;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    display: inline-block;
+    float: left;
+    font-size: 17px;
+    margin: 0;    
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  vertical-align: baseline;
+  width: 250px;
+}
+
+.form-two select {
+    width: 250px;
+}
+
+.form-two input,
+.form-two textarea {
+    padding: 3px 4px;
+}
+
+.form-two textarea {
+    height: 72px;
+    min-height: 72px;
+    min-width: 250px;
+    max-width: 400px;
+    overflow: auto;
+}
+.form-two input:focus,
+.form-two textarea:focus {
+  border-color: #d72a18;
+  -khtml-box-shadow: 0 0 4px #d72a18;
+  -moz-box-shadow: 0 0 4px #d72a18;
+  -webkit-box-shadow: 0 0 4px #d72a18;
+  box-shadow: 0 0 4px #d72a18;
+  color:  #444;
+}
+.form-two label {
+	display: block;
+    cursor: pointer;
+    font-size: 18px;
+	padding-top: 10px;
+	width: auto;
+}
+.form-two fieldset{
+	border-radius: 5px;
+	border: 1px solid black;	
+}
+input[type="radio"]{
+	width: 20px;
+	heigth: 20px;
+	padding: 0 5px 0 0px;
+	clear: left;
+	float: left; 
+	text-align: left;
 }
