@@ -1,5 +1,5 @@
 <?php
-
+/*
 use Doctrine\Common\ClassLoader,
     Doctrine\ORM\Configuration,
     Doctrine\ORM\EntityManager,
@@ -58,3 +58,4 @@ class Doctrine{
     $this->em = EntityManager::create($connectionOptions, $config);
   }
 }
+*/

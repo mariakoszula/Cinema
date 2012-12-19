@@ -252,7 +252,13 @@ table.center{
 	margin-right:auto;
 	
 }
-
+table.register{
+	padding: 0px;
+	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
 table.top{
 	padding: 0px;
 	margin: 0;
@@ -574,4 +580,167 @@ div#hours{
     box-shadow: 
         inset 0 0 5px rgba(0,0,0,0.3),
         inset 0 3px 4px rgba(0,0,0,0.3);
+}
+#register-form {
+    background: #eee;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 25px 60px;   
+    margin: auto;
+    overflow: hidden;
+    padding-top: 18px;
+    width: 350px;
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        0 1px 2px rgba(0,0,0,0.35),
+        inset 0 3px 2px rgba(255,255,255,0.2),
+        inset 0 -3px 2px rgba(0,0,0,0.1);
+}
+
+#register-form fieldset {
+	border: none;
+	}
+
+#register-form fieldset > ul {
+    margin: 6px 0 12px;
+    padding-top: 12px;
+}
+
+#register-form fieldset > ul > li {
+    overflow: hidden;
+    padding: 6px 2px;
+    line-height: 24px;
+}
+
+#register-form fieldset > ul > li > label, 
+.frm-label {
+    display:  block;
+    margin: 0 10px 0 0;
+    width: 200px;
+}
+
+#register-form label {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#register-form input:focus, 
+#register-form button:focus, 
+#register-form select:focus, 
+#register-form textarea:focus {
+    outline: 0 none !important;
+}
+
+#register-form input[type="email"], 
+#register-form input[type="text"], 
+#register-form input[type="tel"], 
+#register-form input[type="password"], 
+#register-form select, 
+#register-form textarea {
+    border: 1px solid #ccc;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    display: inline-block;
+    float: left;
+    font-size: 17px;
+    padding: 2px;
+    margin: 0;    
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  vertical-align: baseline;
+  width: 250px;
+}
+
+#register-form select {
+    width: 260px;
+}
+
+#register-form input[type="email"], 
+#register-form input[type="text"], 
+#register-form input[type="tel"], 
+#register-form input[type="password"], 
+#register-form textarea {
+    padding: 3px 4px;
+}
+
+#register-form textarea {
+    height: 72px;
+    min-height: 72px;
+    min-width: 250px;
+    max-width: 400px;
+    overflow: auto;
+}
+#register-form input[type="email"]:focus, 
+#register-form input[type="text"]:focus, 
+#register-form input[type="tel"]:focus, 
+#register-form input[type="password"]:focus, 
+#register-form textarea:focus {
+  border-color: #1E90FF;
+  -khtml-box-shadow: 0 0 4px #1E90FF;
+  -moz-box-shadow: 0 0 4px #1E90FF;
+  -webkit-box-shadow: 0 0 4px #1E90FF;
+  box-shadow: 0 0 4px #1E90FF;
+  color:  #444;
+}
+
+#register-form button[type="submit"], button[type="reset"] {
+    -webkit-appearance: button;
+    background-color: #0f467c; 
+    background-image: -o-linear-gradient(bottom, rgb(15,70,124) 0%, rgb(30,143,255) 50%);
+    background-image: -moz-linear-gradient(bottom, rgb(15,70,124) 0%, rgb(30,143,255) 50%);
+    background-image: -ms-linear-gradient(bottom, rgb(15,70,124) 0%, rgb(30,143,255) 50%);
+    background-image: -webkit-linear-gradient(bottom, rgb(15,70,124) 0%, rgb(30,143,255) 50%);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(15,70,124)),
+        color-stop(0.5, rgb(30,143,255))
+    );
+    background-image: linear-gradient(bottom, rgb(15,70,124) 0%, rgb(30,143,255) 50%);
+    border: 1px solid #0f467c;
+    color: #fff !important;    
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -khtml-box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+    cursor: pointer;
+    display: inline-block;
+    font: bold 13px/18px Calibri, 'Helvetica Neu', Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px 18px 4px;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.75);
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: auto;
+}
+
+#register-form button[type="submit"], button[type="reset"]:hover {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+}
+
+#register-form button[type="submit"]:active {
+    top: 1px;
+    left: 1px;
+}
+
+#register-form button[type="submit"]:hover {
+    background: #082644 none;
+}
+#register-form button[type="reset"]:hover {
+    background: #082644 none;
 }

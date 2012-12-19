@@ -49,6 +49,7 @@
 		
 	public function delete($id){
 		$this -> model ->delete($id);
+		header('location: '.URL.'manager/listOfUsers');
 	}
 	public function edit($id){
 		$this->view->edit = $this -> model -> edit($id);

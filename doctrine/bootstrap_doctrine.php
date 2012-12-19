@@ -1,5 +1,5 @@
 <?php
-use Doctrine\ORM\Tools\Setup;
+/*use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 require '../config.php';
@@ -20,3 +20,4 @@ $conn = array(
 );
 
 $em = \Doctrine\ORM\EntityManager::create($conn, $config);
+*/

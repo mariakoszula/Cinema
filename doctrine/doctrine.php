@@ -16,7 +16,7 @@
  * and is licensed under the LGPL. For more information, see
  * <http://www.doctrine-project.org>.
  */
-
+/*
 require_once 'Doctrine/Common/ClassLoader.php';
 
 $classLoader = new \Doctrine\Common\ClassLoader('Doctrine');
@@ -48,3 +48,4 @@ if (file_exists($configFile)) {
 $helperSet = ($helperSet) ?: new \Symfony\Component\Console\Helper\HelperSet();
 
 \Doctrine\ORM\Tools\Console\ConsoleRunner::run($helperSet);
+*/
