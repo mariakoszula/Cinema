@@ -19,7 +19,13 @@ img{
 	position: relative;
 	padding: 10px;
 }
-
+img.im_small{
+	width: 80px;
+	height: auto;
+	float: left;
+	position: relative;
+	padding: 10px;
+}
 li{display:inline;}
 
 a{background-color: transparent; text-align: center; text-decoration: underline; color: green};
